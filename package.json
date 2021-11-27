@@ -16,7 +16,8 @@
     "eslint": "eslint --fix --ext .js,.ts,.tsx .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=d3f6eb8b60aa"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.2",
@@ -40,6 +41,7 @@
     "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.0.6",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "storybook-addon-gatsby": "^0.0.2"
