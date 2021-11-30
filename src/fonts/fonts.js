@@ -5,8 +5,6 @@ import { Global } from '@emotion/react';
 const Fonts = () => (
   <Global
     styles={`
-    Copied from https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap
-
     /* devanagari */
     @font-face {
       font-family: 'Poppins';
