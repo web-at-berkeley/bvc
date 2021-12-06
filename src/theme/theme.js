@@ -30,12 +30,19 @@ const theme = extendTheme({
       fontSize: ['16px'],
       fontWeight: '600',
     },
-    body: {
-      fontSize: ['20px, 16px, 14px'],
+    bodyLarge: {
+      fontSize: ['20px'],
       fontWeight: '400',
-    }
+    },
+    bodyStandard: {
+      fontSize: ['16px'],
+      fontWeight: '400',
+    },
+    bodySmall: {
+      fontSize: ['14px'],
+      fontWeight: '400',
+    },
   },
 });
-
 
 export default theme;
