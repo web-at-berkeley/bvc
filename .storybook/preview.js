@@ -1,3 +1,6 @@
+import { ChakraProvider } from "@chakra-ui/provider"
+import theme from '../src/theme';
+import Fonts from '../src/fonts';
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +10,14 @@ export const parameters = {
     },
   },
 }
+const withChakra = (StoryFn) => {
+
+  return (
+    <ChakraProvider theme={theme}>
+      <Fonts />
+      <StoryFn />
+    </ChakraProvider>
+  )
+}
+
+export const decorators = [withChakra]
