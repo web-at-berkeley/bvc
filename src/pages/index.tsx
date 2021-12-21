@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { ChakraProvider, Container, Stack, Heading, Text } from '@chakra-ui/react';
 
-import Fonts from '../fonts/fonts';
-import theme from '../theme/theme';
+import Fonts from '../fonts';
+import theme from '../theme';
 
 const IndexPage = () => {
   return (
