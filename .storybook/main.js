@@ -3,7 +3,8 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   "stories": [
-    "../src/*.stories.tsx",
+    "../src/templates/*.stories.tsx",
+    "../src/components/*.stories.tsx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   addons: [
