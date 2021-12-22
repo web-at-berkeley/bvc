@@ -1,26 +1,54 @@
 import * as React from 'react';
-
-import { ChakraProvider, Container, Stack, Heading, Text } from '@chakra-ui/react';
-
-import Fonts from '../fonts';
 import theme from '../theme';
+import Fonts from '../fonts';
+import { ChakraProvider } from '@chakra-ui/react';
+import { HomeTemplate } from '../templates';
 
 const IndexPage = () => {
+  const templateArgs = {
+    navLinks: ['Home', 'Services', 'Education', 'Team', 'Join', 'Contact', 'Portal'],
+    title: 'Berkeley Venture Capital',
+    subtitle: "Cal's Only Undergraduate VC Organization",
+    section1Title: 'Who are we?',
+    section1Body:
+      "Berkeley Venture Capital is a student-run organization that aims to develop students' interest in venture capital and startup activity on campus. We felt the need to address Berkeley students' ingenuity in engineering, analysis and business management with an equally developed venture capital student organization to serve student's needs when exploring the Bay Area's VC landscape.",
+    section2Title: 'Our Pillars',
+    section2Body:
+      'Our core activities are guided by our core goals: Educating and Developing our members, while building a Community between ourselves and our collaborators.',
+    section2Cards: [
+      [
+        'Education',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
+      ],
+      [
+        'Services',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
+      ],
+      [
+        'Community',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
+      ],
+    ],
+    section3Title: 'Testimonials',
+    section3Slider: [
+      [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget gravida mi arcu purus. In amet cursus feugiat vulputate tellus leo. Dictum hendrerit in maecenas pulvinar magna orci purus commodo. Enim congue mi volutpat orci varius.',
+        'Name Name',
+      ],
+    ],
+    logos: ['mastercard', 'amazon', 'salesforce', 'mastercard', 'amazon', 'salesforce'],
+    footerLinks: [
+      'https://www.facebook.com/',
+      'https://www.instagram.com/',
+      'https://www.linkedin.com/',
+      'email@example.com',
+    ],
+  };
+
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
-      <Container>
-        <Stack>
-          <Heading>The spectacle before us was indeed sublime.</Heading>
-          <Text>
-            Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had
-            ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on
-            a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense
-            dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a
-            ruddy light streaming through a rift in the clouds.
-          </Text>
-        </Stack>
-      </Container>
+      <HomeTemplate {...templateArgs} />
     </ChakraProvider>
   );
 };
