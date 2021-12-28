@@ -19,12 +19,11 @@ const styles = {
     width: '100%',
     height: '100%',
   },
-
 };
 
 export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
   <Box w="100%" h="70" backgroundColor="#E5E5E5">
-    <Flex as="nav" alignItems="center" justify="space-between" wrap="wrap" height='100%' color='#636363'>
+    <Flex as="nav" alignItems="center" justify="space-between" wrap="wrap" height="100%" color="#636363">
       <Flex align="center" width="20%" mr={5}>
         <Heading style={styles.logo}>BVC</Heading>
       </Flex>
