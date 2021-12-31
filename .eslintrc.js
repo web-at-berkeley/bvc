@@ -25,6 +25,6 @@ module.exports = {
     'react/prop-types': 0,
     'import/no-unresolved': 0,
     '@typescript-eslint/no-unused-vars': 2,
-    'prettier/prettier': ['error', { tabWidth: 2 }],
+    'prettier/prettier': [1, { tabWidth: 2 }],
   },
 };
