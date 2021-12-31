@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'gatsby-link';
 import { Box, HStack, Text, Flex, Heading } from '@chakra-ui/react';
 
 interface HeaderProps {
