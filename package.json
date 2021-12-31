@@ -53,5 +53,8 @@
     "husky": "^7.0.4",
     "prettier": "^2.5.0",
     "storybook-addon-gatsby": "^0.0.2"
+  },
+  "resolutions": {
+    "webpack": "5.52.1"
   }
 }

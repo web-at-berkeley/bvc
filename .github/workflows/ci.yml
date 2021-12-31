@@ -18,3 +18,5 @@ jobs:
           node-version: '14'
       - run: yarn
       - run: yarn lint
+      - run: yarn develop & npx wait-on http://localhost:8000
+      - run: yarn storybook & npx wait-on http://localhost:6006
