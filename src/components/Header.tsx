@@ -12,19 +12,23 @@ const styles = {
     lineHeight: '45px',
     letterSpacing: '0.1em',
     color: '#636363',
+    textAlign: 'center',
+    display: 'inline-block',
+    position: 'relative',
+    width: '100%',
   },
 };
 
 export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
   <Box w="100%" h="70" backgroundColor="#E5E5E5">
     <Flex as="nav" align="center" justify="space-between" wrap="wrap" padding={5} color="black">
-      <Flex align="center" mr={5}>
+      <Flex align="center" width="25%" mr={5}>
         <Heading style={styles.logo}>BVC</Heading>
       </Flex>
 
-      <HStack spacing={4}>
+      <HStack spacing={8} style={{ color: '#636363' }}>
         <Link to="/404">
-          <h5>{pages[0]}</h5>
+          <Text>{pages[0]}</Text>
         </Link>
         <Link to="/">
           <Text>{pages[1]}</Text>
