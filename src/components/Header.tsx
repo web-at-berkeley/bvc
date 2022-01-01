@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
       </Flex>
 
       <HStack spacing={8} style={{ color: '#636363' }}>
-        <Link to="/404">
+        <Link to="/">
           <Text>{pages[0]}</Text>
         </Link>
         <Link to="/">
