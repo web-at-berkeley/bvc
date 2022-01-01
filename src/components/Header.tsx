@@ -15,18 +15,21 @@ const styles = {
     textAlign: 'center',
     display: 'inline-block',
     position: 'relative',
+    verticalAlign: 'center',
     width: '100%',
+    height: '100%',
   },
+
 };
 
 export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
   <Box w="100%" h="70" backgroundColor="#E5E5E5">
-    <Flex as="nav" align="center" justify="space-between" wrap="wrap" padding={5} color="black">
-      <Flex align="center" width="25%" mr={5}>
+    <Flex as="nav" alignItems="center" justify="space-between" wrap="wrap" height='100%' color='#636363'>
+      <Flex align="center" width="20%" mr={5}>
         <Heading style={styles.logo}>BVC</Heading>
       </Flex>
 
-      <HStack spacing={8} style={{ color: '#636363' }}>
+      <HStack spacing={8} marginRight="5%">
         <Link to="/">
           <Text>{pages[0]}</Text>
         </Link>
