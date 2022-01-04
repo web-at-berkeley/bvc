@@ -1,4 +1,4 @@
-export { Header } from './Header';
-export { Footer } from './Footer';
-export { IconCard } from './IconCard';
-export { Testimonial } from './Testimonial';
+export * from './Header';
+export * from './Footer';
+export * from './IconCard';
+export * from './Testimonial';

@@ -7,12 +7,12 @@ import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
 import { Flex, Spacer, Link, HStack, Text, Image } from '@chakra-ui/react';
 import badge from '../assets/images/badge.png';
 
-interface FooterProps {
+export type FooterProps = {
   facebook: string;
   instagram: string;
   linkedin: string;
   email: string;
-}
+};
 
 const iconStyles = {
   color: 'white',

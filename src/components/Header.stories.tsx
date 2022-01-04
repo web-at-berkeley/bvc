@@ -13,5 +13,13 @@ const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  pages: ['Home', 'Services', 'Education', 'Team', 'Join', 'Contact', 'Portal'],
+  pages: [
+    { linkText: 'Home', linkTarget: '/' },
+    { linkText: 'Services', linkTarget: '/' },
+    { linkText: 'Education', linkTarget: '/' },
+    { linkText: 'Team', linkTarget: '/' },
+    { linkText: 'Join', linkTarget: '/' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'Portal', linkTarget: '/' },
+  ],
 };
