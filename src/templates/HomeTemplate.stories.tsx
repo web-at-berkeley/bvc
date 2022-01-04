@@ -13,7 +13,17 @@ const Template: ComponentStory<typeof HomeTemplate> = (args) => <HomeTemplate {.
 
 export const Primary = Template.bind({});
 Primary.args = {
-  navLinks: ['Home', 'Services', 'Education', 'Team', 'Join', 'Contact', 'Portal'],
+  navLinks: {
+    pages: [
+      { linkText: 'Home', linkTarget: '/' },
+      { linkText: 'Services', linkTarget: '/' },
+      { linkText: 'Education', linkTarget: '/' },
+      { linkText: 'Team', linkTarget: '/' },
+      { linkText: 'Join', linkTarget: '/' },
+      { linkText: 'Contact', linkTarget: '/contact' },
+      { linkText: 'Portal', linkTarget: '/' },
+    ],
+  },
   title: 'Berkeley Venture Capital',
   subtitle: "Cal's Only Undergraduate VC Organization",
   section1Title: 'Who are we?',

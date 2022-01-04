@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Box, HStack, Text } from '@chakra-ui/react';
 
-interface TestimonialProps {
+export type TestimonialProps = {
   body: string;
   name: string;
-}
+};
 
 export const Testimonial = ({ body, name }: TestimonialProps) => (
   <Box w="100%" h="149">
