@@ -21,6 +21,7 @@ module.exports = {
     'plugin:import/warnings',
   ],
   rules: {
+    semi: [1, 'always'],
     '@typescript-eslint/ban-ts-comment': 0,
     'react/prop-types': 0,
     'import/no-unresolved': 0,

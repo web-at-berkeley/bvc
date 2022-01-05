@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
 import { Flex, Stack, Heading, Text, Box, HStack, VStack } from '@chakra-ui/react';
-import { Header, Footer, IconCard, Testimonial } from '../components';
+import { Header, Footer, IconCard, Testimonial, HeaderProps } from '../components';
 
-interface HomeTemplateProps {
-  navLinks: string[];
+export type HomeTemplateProps = {
+  navLinks: HeaderProps;
   title: string;
   subtitle: string;
   section1Title: string;
@@ -16,7 +16,7 @@ interface HomeTemplateProps {
   section3Slider: string[][];
   logos: string[];
   footerLinks: string[];
-}
+};
 
 export const HomeTemplate: React.FC<HomeTemplateProps> = ({
   navLinks,
@@ -38,7 +38,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
   const testimonials = section3Slider.map(([body, name], i) => <Testimonial body={body} name={name} key={i} />);
   return (
     <Flex direction="column" align="center" maxW={{ xl: '1200px' }} m="0 auto">
-      <Header pages={navLinks} />
+      <Header {...navLinks} />
 
       <Box w="100%" h="727" backgroundColor="#636363">
         <Heading>{title}</Heading>

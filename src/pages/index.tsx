@@ -2,11 +2,21 @@ import * as React from 'react';
 import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
-import { HomeTemplate } from '../templates';
+import { HomeTemplate, HomeTemplateProps } from '../templates';
 
 const IndexPage = () => {
-  const templateArgs = {
-    navLinks: ['Home', 'Services', 'Education', 'Team', 'Join', 'Contact', 'Portal'],
+  const templateArgs: HomeTemplateProps = {
+    navLinks: {
+      pages: [
+        { linkText: 'Home', linkTarget: '/' },
+        { linkText: 'Services', linkTarget: '/' },
+        { linkText: 'Education', linkTarget: '/' },
+        { linkText: 'Team', linkTarget: '/' },
+        { linkText: 'Join', linkTarget: '/' },
+        { linkText: 'Contact', linkTarget: '/contact' },
+        { linkText: 'Portal', linkTarget: '/' },
+      ],
+    },
     title: 'Berkeley Venture Capital',
     subtitle: "Cal's Only Undergraduate VC Organization",
     section1Title: 'Who are we?',

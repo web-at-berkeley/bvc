@@ -1,16 +1,11 @@
-import React, { Component} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 type Props = {
-  title: string
-}
+  title: string;
+};
 
-const Tab = ({children} : Props) => {
-  return (
-    <div>
-      {children}
-    </div>
-  )
-}
+const Tab = ({ children }: Props) => {
+  return <div>{children}</div>;
+};
 
 export default Tab;

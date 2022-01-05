@@ -2,9 +2,14 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { Box, HStack, Text, Flex, Heading } from '@chakra-ui/react';
 
-interface HeaderProps {
-  pages: string[];
+interface LinkInfo {
+  linkText: string;
+  linkTarget: string;
 }
+
+export type HeaderProps = {
+  pages: LinkInfo[];
+};
 
 const styles = {
   logo: {
@@ -29,27 +34,13 @@ export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
       </Flex>
 
       <HStack spacing={8} marginRight="5%">
-        <Link to="/">
-          <Text>{pages[0]}</Text>
-        </Link>
-        <Link to="/">
-          <Text>{pages[1]}</Text>
-        </Link>
-        <Link to="/">
-          <Text>{pages[2]}</Text>
-        </Link>
-        <Link to="/">
-          <Text>{pages[3]}</Text>
-        </Link>
-        <Link to="/">
-          <Text>{pages[4]}</Text>
-        </Link>
-        <Link to="/">
-          <Text>{pages[5]}</Text>
-        </Link>
-        <Link to="/">
-          <Text>{pages[6]}</Text>
-        </Link>
+        {pages
+          ? pages.map(({ linkText, linkTarget }, i) => (
+              <Link to={linkTarget} key={i}>
+                <Text>{linkText}</Text>
+              </Link>
+            ))
+          : undefined}
       </HStack>
     </Flex>
   </Box>

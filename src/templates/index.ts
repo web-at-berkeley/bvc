@@ -1,1 +1,2 @@
-export { HomeTemplate } from './HomeTemplate';
+export * from './HomeTemplate';
+export * from './ContactTemplate';
