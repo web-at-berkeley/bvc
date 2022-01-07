@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
-import { Flex, Stack, Heading, Text, Box, HStack, VStack } from '@chakra-ui/react';
-import { Header, Footer, IconCard, Testimonial, HeaderProps } from '../components';
+import { VStack, HStack, Text, Box } from '@chakra-ui/react';
+import { Header, Footer, IconCard, Testimonial, HeaderProps, PageWrapper } from '../components';
 
 export type HomeTemplateProps = {
   navLinks: HeaderProps;
@@ -32,39 +32,48 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
   logos,
   footerLinks,
 }: HomeTemplateProps) => {
-  const pillars = section2Cards.map(([icon, title, body], i) => (
-    <IconCard icon={icon} title={title} body={body} key={i} />
-  ));
   const testimonials = section3Slider.map(([body, name], i) => <Testimonial body={body} name={name} key={i} />);
   return (
-    <Flex direction="column" align="center" maxW={{ xl: '1200px' }} m="0 auto">
+    <PageWrapper>
       <Header {...navLinks} />
 
       <Box w="100%" h="727" backgroundColor="#636363">
-        <Heading>{title}</Heading>
-        <Heading>{subtitle}</Heading>
+        <Text textStyle="h1" casing="uppercase">
+          {title}
+        </Text>
+        <Text textStyle="h4">{subtitle}</Text>
       </Box>
 
-      <Stack>
-        <Heading>{section1Title}</Heading>
-        <Text>{section1Body}</Text>
+      <VStack maxW={{ xl: '80%' }} m="0 auto">
+        <Text textStyle="h1" w="100%" casing="uppercase">
+          {section1Title}
+        </Text>
+        <Text textStyle="bodyLarge">{section1Body}</Text>
 
-        <Heading>{section2Title}</Heading>
-        <Text>{section2Body}</Text>
-        <HStack>{pillars}</HStack>
+        <Text textStyle="h1" w="100%" casing="uppercase">
+          {section2Title}
+        </Text>
+        <Text textStyle="bodyLarge">{section2Body}</Text>
+        <HStack>
+          {section2Cards.map(([icon, title, body], i) => (
+            <IconCard icon={icon} title={title} body={body} key={i} />
+          ))}
+        </HStack>
 
-        <Heading>{section3Title}</Heading>
+        <Text textStyle="h1" w="100%" casing="uppercase">
+          {section3Title}
+        </Text>
         {testimonials[0]}
-      </Stack>
+      </VStack>
 
-      <Box w="100%" h="376" backgroundColor="grey">
-        <VStack>
-          <Heading>Members Recieve Offers From</Heading>
-          <HStack>{logos}</HStack>
-        </VStack>
-      </Box>
+      <VStack w="100%" h="376" backgroundColor="#E5E5E5" justify="space-between">
+        <Text textStyle="h3" casing="uppercase">
+          Members Recieve Offers From
+        </Text>
+        <HStack>{logos}</HStack>
+      </VStack>
 
       <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />
-    </Flex>
+    </PageWrapper>
   );
 };

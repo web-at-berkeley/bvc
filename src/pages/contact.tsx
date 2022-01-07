@@ -14,7 +14,7 @@ const ContactPage = () => {
         { linkText: 'Home', linkTarget: '/' },
         { linkText: 'Services', linkTarget: '/' },
         { linkText: 'Education', linkTarget: '/' },
-        { linkText: 'Team', linkTarget: '/' },
+        { linkText: 'Team', linkTarget: '/team' },
         { linkText: 'Join', linkTarget: '/' },
         { linkText: 'Contact', linkTarget: '/contact' },
         { linkText: 'Portal', linkTarget: '/' },
@@ -29,10 +29,12 @@ const ContactPage = () => {
   };
 
   return (
-    <ChakraProvider theme={theme}>
-      <Fonts />
-      <ContactTemplate {...templateArgs} />
-    </ChakraProvider>
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        <Fonts />
+        <ContactTemplate {...templateArgs} />
+      </ChakraProvider>
+    </React.StrictMode>
   );
 };
 

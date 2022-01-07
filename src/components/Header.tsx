@@ -30,14 +30,16 @@ export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
   <Box w="100%" h="70" backgroundColor="#E5E5E5">
     <Flex as="nav" alignItems="center" justify="space-between" wrap="wrap" height="100%" color="#636363">
       <Flex align="center" width="20%" mr={5}>
-        <Heading style={styles.logo}>BVC</Heading>
+        <Link to="/" style={styles.logo}>
+          <Heading>BVC</Heading>
+        </Link>
       </Flex>
 
       <HStack spacing={8} marginRight="5%">
         {pages
           ? pages.map(({ linkText, linkTarget }, i) => (
               <Link to={linkTarget} key={i}>
-                <Text>{linkText}</Text>
+                <Text textStyle="bodyLarge">{linkText}</Text>
               </Link>
             ))
           : undefined}

@@ -3,3 +3,4 @@ node_modules/
 public
 build-storybook.log
 .DS_Store
+.idea/
