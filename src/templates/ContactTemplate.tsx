@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
-import { Footer, Header, HeaderProps } from '../components';
+import { Box, Flex, Text, VStack, Spacer } from '@chakra-ui/react';
+import { Footer, Header, HeaderProps, PageWrapper } from '../components';
 
 interface ContactTemplateProps {
   title: string;
@@ -13,21 +13,26 @@ interface ContactTemplateProps {
 export const ContactTemplate = ({ title, subtitle, tabLabels, navLinks, footerLinks }: ContactTemplateProps) => {
   //   const [index, setIndex] = React.useState(0);
   return (
-    <Flex direction="column" align="center" maxW={{ xl: '1200px' }} m="0 auto">
+    <PageWrapper>
       <Header {...navLinks} />
-      <Heading>{title}</Heading>
-      <Flex w="100%" justifyContent="space-around">
-        <Text>{subtitle}</Text>
-        <Box>
+      <VStack maxW={{ xl: '80%' }} m="0 auto">
+        <Text textStyle="h1" casing="uppercase">
+          {title}
+        </Text>
+        <Flex w="100%" justifyContent="space-around">
+          <Text>{subtitle}</Text>
           <Box>
-            <Text>TabList here, {tabLabels}</Text>
+            <Box>
+              <Text>TabList here, {tabLabels}</Text>
+            </Box>
+            <Box>
+              <Text>Form inputs and submit button</Text>
+            </Box>
           </Box>
-          <Box>
-            <Text>Form inputs and submit button</Text>
-          </Box>
-        </Box>
-      </Flex>
+        </Flex>
+      </VStack>
+      <Spacer />
       <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />
-    </Flex>
+    </PageWrapper>
   );
 };

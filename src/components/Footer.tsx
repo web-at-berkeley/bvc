@@ -1,10 +1,7 @@
 import React from 'react';
-import { FaFacebookF } from '@react-icons/all-files/fa/FaFacebookF';
-import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
-import { FaLinkedinIn } from '@react-icons/all-files/fa/FaLinkedinIn';
-import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
+import { FiFacebook, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
 
-import { Flex, Spacer, Link, HStack, Text, Image } from '@chakra-ui/react';
+import { Flex, Link, HStack, Text, Image } from '@chakra-ui/react';
 import badge from '../assets/images/badge.png';
 
 export type FooterProps = {
@@ -14,32 +11,34 @@ export type FooterProps = {
   email: string;
 };
 
-const iconStyles = {
-  color: 'white',
-  'margin-right': '20px',
+const iconProps = {
+  style: {
+    color: 'white',
+  },
+  size: '25px',
 };
 
 export const Footer = ({ facebook, instagram, linkedin, email }: FooterProps) => (
-  <Flex w="100%" h="70" backgroundColor="#464646" align="center">
-    <HStack marginLeft="40px">
-      <Link href={facebook}>
-        <FaFacebookF style={iconStyles} />
+  <Flex w="100%" h="118" backgroundColor="#464646" align="center" justify="space-between" p="0 121px">
+    <HStack spacing="30px">
+      <Link href={facebook} isExternal>
+        <FiFacebook {...iconProps} />
       </Link>
-      <Link href={instagram}>
-        <FaInstagram style={iconStyles} />
+      <Link href={instagram} isExternal>
+        <FiInstagram {...iconProps} />
       </Link>
-      <Link href={linkedin}>
-        <FaLinkedinIn style={iconStyles} />
+      <Link href={linkedin} isExternal>
+        <FiLinkedin {...iconProps} />
       </Link>
-      <Link href={email}>
-        <AiOutlineMail margin-right="0px" style={iconStyles} />
+      <Link href={email} isExternal>
+        <FiMail {...iconProps} />
       </Link>
     </HStack>
-    <Spacer />
-    <Text font="Poppins" textStyle="h6" color="white">
+    <Text textStyle="bodyLarge" color="white">
       ©2022 BVC
     </Text>
-    <Spacer />
-    <Image height={8} src={badge} marginRight="40px" />
+    <Link href="https://webatberkeley.org/" isExternal>
+      <Image h="62px" src={badge} />
+    </Link>
   </Flex>
 );
