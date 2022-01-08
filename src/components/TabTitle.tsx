@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-
+import './Tabs.css';
 type Props = {
   title: string;
   index: number;
@@ -13,7 +13,7 @@ const TabTitle = ({ title, setActiveTab, activeTab, index }: Props) => {
   }, [setActiveTab, index]);
 
   return (
-    <li>
+    <li className="tab">
       <button className={activeTab === index ? 'tabs active-tabs' : 'tabs'} onClick={onClick}>
         {title}
       </button>

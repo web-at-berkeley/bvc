@@ -4,6 +4,7 @@ import { ComponentMeta } from '@storybook/react';
 
 import Tabs from './Tabs';
 import Tab from './Tab';
+import Contact from './ContactForm';
 
 export default {
   title: 'Components/Tabs',
@@ -12,8 +13,9 @@ export default {
 
 export const Primary = () => (
   <Tabs>
-    <Tab title="Lemon">Lemon is yellow</Tab>
-    <Tab title="Strawberry">Strawberry is red</Tab>
-    <Tab title="Pear">Pear is green</Tab>
+    <Tab title="Student">
+      <Contact></Contact>
+    </Tab>
+    <Tab title="Client">Client form</Tab>
   </Tabs>
 );

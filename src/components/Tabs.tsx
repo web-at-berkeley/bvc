@@ -1,6 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import TabTitle from './TabTitle';
 
+import './Tabs.css';
 
 type Props = {
   children: ReactElement[];
@@ -11,12 +12,12 @@ const Tabs = ({ children }: Props) => {
 
   return (
     <div className="container">
-      <ul>
+      <ul className="bloc-tabs">
         {children.map((item, index) => (
           <TabTitle key={index} title={item.props.title} index={index} setActiveTab={setSelectedTabIndex} />
         ))}
       </ul>
-      <div className="content">{children[selectedTabIndex]}</div>
+      <div className="content-tabs">{children[selectedTabIndex]}</div>
     </div>
   );
 };

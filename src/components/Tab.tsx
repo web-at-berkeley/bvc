@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Tabs.css';
 type Props = {
   title: string;
 };
