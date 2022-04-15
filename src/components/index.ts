@@ -4,3 +4,4 @@ export * from './IconCard';
 export * from './Testimonial';
 export * from './TeamCard';
 export * from './PageWrapper';
+export * from './TabsSection';

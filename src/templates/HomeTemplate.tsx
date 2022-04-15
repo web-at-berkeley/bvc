@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
-import { VStack, HStack, Text, Box } from '@chakra-ui/react';
+import { VStack, HStack, Text, Box, Flex } from '@chakra-ui/react';
 import { Header, Footer, IconCard, Testimonial, HeaderProps, PageWrapper } from '../components';
 
 export type HomeTemplateProps = {
@@ -54,11 +54,11 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           {section2Title}
         </Text>
         <Text textStyle="bodyLarge">{section2Body}</Text>
-        <HStack>
+        <Flex justify='space-around' padding='50px'>
           {section2Cards.map(([icon, title, body], i) => (
             <IconCard icon={icon} title={title} body={body} key={i} />
           ))}
-        </HStack>
+        </Flex>
 
         <Text textStyle="h1" w="100%" casing="uppercase">
           {section3Title}

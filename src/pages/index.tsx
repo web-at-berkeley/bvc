@@ -3,20 +3,11 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { HomeTemplate, HomeTemplateProps } from '../templates';
-
+import icon from '../assets/images/ICON2.png';
+import { navLinks } from './navlinks';
 const IndexPage = () => {
   const templateArgs: HomeTemplateProps = {
-    navLinks: {
-      pages: [
-        { linkText: 'Home', linkTarget: '/' },
-        { linkText: 'Services', linkTarget: '/' },
-        { linkText: 'Education', linkTarget: '/' },
-        { linkText: 'Team', linkTarget: '/team' },
-        { linkText: 'Join', linkTarget: '/' },
-        { linkText: 'Contact', linkTarget: '/contact' },
-        { linkText: 'Portal', linkTarget: '/' },
-      ],
-    },
+    navLinks: navLinks,
     title: 'Berkeley Venture Capital',
     subtitle: "Cal's Only Undergraduate VC Organization",
     section1Title: 'Who are we?',
@@ -27,14 +18,17 @@ const IndexPage = () => {
       'Our core activities are guided by our core goals: Educating and Developing our members, while building a Community between ourselves and our collaborators.',
     section2Cards: [
       [
+        icon,
         'Education',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
       ],
       [
+        icon,
         'Services',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
       ],
       [
+        icon,
         'Community',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
       ],

@@ -4,6 +4,7 @@ import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { TeamTemplate } from '../templates';
 import placeholder from '../assets/images/teamPlaceholder.png';
+import { navLinks } from './navlinks';
 
 const TeamPage = () => {
   const templateArgs = {
@@ -43,17 +44,7 @@ const TeamPage = () => {
     bottomText:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. A interdum ac maecenas felis cras odio. Tellus lectus mollis at ultricies velit eu consequat, donec nibh. At quis habitant vel donec purus. Volutpat ac amet, morbi nibh diam tincidunt sed dolor. Convallis aenean et eget sed.',
     bottomText2: 'Lorem ipsum dolor sit amet, consectetur adipiscing?',
-    navLinks: {
-      pages: [
-        { linkText: 'Home', linkTarget: '/' },
-        { linkText: 'Services', linkTarget: '/' },
-        { linkText: 'Education', linkTarget: '/' },
-        { linkText: 'Team', linkTarget: '/team' },
-        { linkText: 'Join', linkTarget: '/' },
-        { linkText: 'Contact', linkTarget: '/contact' },
-        { linkText: 'Portal', linkTarget: '/' },
-      ],
-    },
+    navLinks: navLinks,
     footerLinks: [
       'https://www.facebook.com/',
       'https://www.instagram.com/',

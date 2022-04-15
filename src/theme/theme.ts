@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-
+import { TabStyles as Tabs } from './components/TabStyles';
 const theme = extendTheme({
   fonts: {
     heading: 'Poppins',
@@ -42,6 +42,9 @@ const theme = extendTheme({
       fontSize: ['14px'],
       fontWeight: '400',
     },
+  },
+  components: {
+    Tabs,
   },
 });
 
