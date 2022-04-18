@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => (
   <Box w="100%" h="70" backgroundColor="#E5E5E5">
     <Flex as="nav" alignItems="center" justify="space-between" wrap="wrap" height="100%" color="#636363">
       <Flex align="center" width="20%" mr={5}>
-        <Link to="/" style={styles.logo} >
+        <Link to="/" style={styles.logo}>
           <Heading>BVC</Heading>
         </Link>
       </Flex>

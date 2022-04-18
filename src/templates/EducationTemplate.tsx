@@ -36,10 +36,14 @@ export const EducationTemplate = ({
       <Tabs index={tabIndex} w="100%" onChange={(index) => setTabIndex(index)}>
         <TabList m={20}>
           <Tab _selected={{ border: 'solid 2.5px', borderRadius: '10px' }} padding="20px" mr="50px">
-            {tab1Label}
+            <Text textStyle="h5" casing="uppercase">
+              {tab1Label}
+            </Text>
           </Tab>
           <Tab _selected={{ border: 'solid 2.5px', borderRadius: '10px' }} padding="20px" mr="50px">
-            {tab2Label}
+            <Text textStyle="h5" casing="uppercase">
+              {tab2Label}
+            </Text>
           </Tab>
         </TabList>
       </Tabs>

@@ -45,6 +45,31 @@ const theme = extendTheme({
   },
   components: {
     Tabs,
+    Input: {
+      baseStyle: {
+        field: {
+          borderColor: 'primary.accent2',
+          _hover: {
+            borderColor: 'primary.foreground',
+          },
+        },
+      },
+      sizes: {
+        md: {
+          field: {
+            w: '370px',
+            h: '55px',
+          },
+        },
+        lg: {
+          field: {
+            w: '783px',
+            h: '55px',
+          },
+        },
+      },
+      defaultProps: {},
+    },
   },
 });
 

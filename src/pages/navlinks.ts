@@ -4,8 +4,8 @@ export const navLinks = {
     { linkText: 'Services', linkTarget: '/services' },
     { linkText: 'Education', linkTarget: '/education' },
     { linkText: 'Team', linkTarget: '/team' },
-    { linkText: 'Join', linkTarget: '/' },
+    { linkText: 'Join', linkTarget: '/join' },
     { linkText: 'Contact', linkTarget: '/contact' },
-    { linkText: 'Portal', linkTarget: '/' },
+    { linkText: 'Portal', linkTarget: '/portal' },
   ],
 };

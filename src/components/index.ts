@@ -5,3 +5,6 @@ export * from './Testimonial';
 export * from './TeamCard';
 export * from './PageWrapper';
 export * from './TabsSection';
+export * from './WideCard';
+export * from './ServiceForm';
+export * from './ContactForm';

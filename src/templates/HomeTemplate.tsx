@@ -54,7 +54,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           {section2Title}
         </Text>
         <Text textStyle="bodyLarge">{section2Body}</Text>
-        <Flex justify='space-around' padding='50px'>
+        <Flex justify="space-around" padding="50px">
           {section2Cards.map(([icon, title, body], i) => (
             <IconCard icon={icon} title={title} body={body} key={i} />
           ))}

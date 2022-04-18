@@ -3,7 +3,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { IconCard } from './IconCard';
-import icon from '../assets/images/ICON2.png'
+import icon from '../assets/images/ICON2.png';
 export default {
   title: 'Components/IconCard',
   component: IconCard,

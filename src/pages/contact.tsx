@@ -7,7 +7,8 @@ import { navLinks } from './navlinks';
 const ContactPage = () => {
   const templateArgs = {
     title: 'Get In Touch With Us',
-    subtitle: 'Subtitle',
+    subtitle:
+      'Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nec, pretium natoque ultricies vulputate sed. At eget libero libero pellentesque quis adipiscing. ',
     tabLabels: ['Student', 'Client'],
     navLinks: navLinks,
     footerLinks: [
