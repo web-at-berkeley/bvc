@@ -7,8 +7,11 @@ import { navLinks } from './navlinks';
 const ContactPage = () => {
   const templateArgs = {
     title: 'Get In Touch With Us',
-    subtitle:
-      'Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nec, pretium natoque ultricies vulputate sed. At eget libero libero pellentesque quis adipiscing. ',
+    subtitle: [
+      'Interested in learning more about us? For all questions regarding client projects, fellowship curriculum, DeCal, or other general inquires, please fill out this form and we’ll reach out to you or your organization.',
+
+      'Additionally, the Berkeley Venture Capital welcomes professional development partnerships at any given time.',
+    ],
     tabLabels: ['Student', 'Client'],
     navLinks: navLinks,
     footerLinks: [

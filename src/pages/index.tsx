@@ -3,12 +3,26 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { HomeTemplate, HomeTemplateProps } from '../templates';
-import icon from '../assets/images/ICON2.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import icon1 from '../assets/images/icon1.png';
+import icon2 from '../assets/images/icon2.png';
+import icon3 from '../assets/images/icon3.png';
+import heroImg from '../assets/images/hero.png';
+import mastercard from '../assets/logos/mastercard.png';
+import citi from '../assets/logos/citi.png';
+import intuit from '../assets/logos/Intuit.png';
+import square from '../assets/logos/Intuit.png';
+import deutche from '../assets/logos/Deutche.png';
+import salesforce from '../assets/logos/salesforce.png';
+import amazon from '../assets/logos/amazon.png';
+import jpmorgan from '../assets/logos/jpmorgan.png';
+import ey from '../assets/logos/ey.png';
 import { navLinks } from './navlinks';
 const IndexPage = () => {
   const templateArgs: HomeTemplateProps = {
     navLinks: navLinks,
     title: 'Berkeley Venture Capital',
+    heroImg: heroImg,
     subtitle: "Cal's Only Undergraduate VC Organization",
     section1Title: 'Who are we?',
     section1Body:
@@ -18,19 +32,19 @@ const IndexPage = () => {
       'Our core activities are guided by our core goals: Educating and Developing our members, while building a Community between ourselves and our collaborators.',
     section2Cards: [
       [
-        icon,
-        'Education',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
+        icon1,
+        'education',
+        'Our fellowship-curriculum was designed with hands-on practicality in mind. Paired with a VC, our fellows are guided through the startup sourcing and screening process, and present a final deliverable to close their fellowship.',
       ],
       [
-        icon,
-        'Services',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
+        icon2,
+        'services',
+        'We aim to further our members’ readiness for industry-level work in a variety of fields. Equipped with the venture acumen from their fellowship, our members now posses the knowledge to work on advanced, collaborative projects with VC’s.',
       ],
       [
-        icon,
-        'Community',
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo consectetur sed et at aliquet. Dignissim suspendisse tellus pellentesque erat et elementum eu egestas. Posuere malesuada odio purus feugiat purus volutpat. Ipsum.',
+        icon3,
+        'community',
+        'One of the strongest aspects about the Bay Area ecosystem is its diversity of thought. We aim to bring together voices from different industries to foster thought provoking discussion and strengthen our community while doing so.',
       ],
     ],
     section3Title: 'Testimonials',
@@ -40,7 +54,7 @@ const IndexPage = () => {
         'Name Name',
       ],
     ],
-    logos: ['mastercard', 'amazon', 'salesforce', 'mastercard', 'amazon', 'salesforce'],
+    logos: [square, citi, salesforce, deutche, mastercard, amazon, jpmorgan, intuit, ey],
     footerLinks: [
       'https://www.facebook.com/',
       'https://www.instagram.com/',

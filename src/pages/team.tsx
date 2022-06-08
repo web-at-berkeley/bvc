@@ -3,42 +3,67 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { TeamTemplate } from '../templates';
-import placeholder from '../assets/images/teamPlaceholder.png';
 import { navLinks } from './navlinks';
+import dua from '../assets/teamphotos/dua.png';
+import ferrufino from '../assets/teamphotos/ferrufino.png';
+import garg from '../assets/teamphotos/garg.png';
+import larsen from '../assets/teamphotos/larsen.png';
+import leal from '../assets/teamphotos/leal.png';
+import liu from '../assets/teamphotos/liu.png';
+import ramirez from '../assets/teamphotos/ramirez.png';
+import tung from '../assets/teamphotos/tung.png';
 
 const TeamPage = () => {
   const templateArgs = {
     title: 'Our Team',
     people: [
       {
-        photo: placeholder,
+        photo: dua,
         title: 'President',
-        name: 'Name Name',
+        name: 'Shubhan Dua',
+        to: 'linkedin.com/in/shubhandua',
       },
       {
-        photo: placeholder,
+        photo: liu,
         title: 'Vice President',
-        name: 'Name Name',
+        name: 'Hubert Liu',
+        to: 'linkedin.com/in/yuxinhubertliu',
       },
       {
-        photo: placeholder,
-        title: 'Director of Curriculum',
-        name: 'Name Name',
+        photo: ferrufino,
+        title: 'Director of External',
+        name: 'Josh Ferrufino',
+        to: 'linkedin.com/in/jferrufino',
       },
       {
-        photo: placeholder,
-        title: 'Director of Services',
-        name: 'Name Name',
+        photo: tung,
+        title: 'Co-Director of Internal',
+        name: 'Sophia Tung',
+        to: 'linkedin.com/in/sophia-tung',
       },
       {
-        photo: placeholder,
-        title: 'Director of Internal',
-        name: 'Name Name',
+        photo: larsen,
+        title: 'Co-Director of Internal',
+        name: 'Isabella Larsen',
+        to: 'linkedin.com/in/annaisabellalarsen',
       },
       {
-        photo: placeholder,
-        title: 'Director of Community',
-        name: 'Name Name',
+        photo: ramirez,
+        title: 'Co-Director of Finance',
+        name: 'Ameyalli Ramirez',
+        to: 'linkedin.com/in/ameyalli-ramirez',
+      },
+      {
+        photo: garg,
+        title: 'Co-Director of Finance',
+        name: 'Vega Garg',
+        to: 'linkedin.com/in/veda-garg',
+      },
+      {
+        photo: leal,
+        title: 'Director of Cirriculum',
+        name: 'Nathan Leal',
+        to: 'linkedin.com/in/nathan-leal',
       },
     ],
     bottomText:

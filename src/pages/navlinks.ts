@@ -1,11 +1,10 @@
 export const navLinks = {
   pages: [
-    { linkText: 'Home', linkTarget: '/' },
     { linkText: 'Services', linkTarget: '/services' },
     { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
     { linkText: 'Team', linkTarget: '/team' },
-    { linkText: 'Join', linkTarget: '/join' },
     { linkText: 'Contact', linkTarget: '/contact' },
-    { linkText: 'Portal', linkTarget: '/portal' },
+    { linkText: 'JOIN', linkTarget: '/join' },
   ],
 };

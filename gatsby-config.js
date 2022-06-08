@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-netlify-cms',
+    `gatsby-plugin-transition-link`,
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
