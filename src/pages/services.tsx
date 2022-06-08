@@ -3,7 +3,6 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ServiceTemplate } from '../templates';
-import { navLinks } from './navlinks';
 import quad1 from '../assets/images/quad1.png';
 import quad2 from '../assets/images/quad2.png';
 import quad3 from '../assets/images/quad3.png';
@@ -15,6 +14,18 @@ import image18 from '../assets/logos3/image18.png';
 import image19 from '../assets/logos3/image19.png';
 import image20 from '../assets/logos3/image20.png';
 import image21 from '../assets/logos3/image21.png';
+
+const navLinks = {
+  pages: [
+    { linkText: 'Services', linkTarget: '/services' },
+    { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
+    { linkText: 'Team', linkTarget: '/team' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'JOIN', linkTarget: '/join' },
+  ],
+};
+
 const ContactPage = () => {
   const templateArgs = {
     title: 'Services',

@@ -3,7 +3,6 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { TeamTemplate } from '../templates';
-import { navLinks } from './navlinks';
 import dua from '../assets/teamphotos/dua.png';
 import ferrufino from '../assets/teamphotos/ferrufino.png';
 import garg from '../assets/teamphotos/garg.png';
@@ -12,6 +11,17 @@ import leal from '../assets/teamphotos/leal.png';
 import liu from '../assets/teamphotos/liu.png';
 import ramirez from '../assets/teamphotos/ramirez.png';
 import tung from '../assets/teamphotos/tung.png';
+
+const navLinks = {
+  pages: [
+    { linkText: 'Services', linkTarget: '/services' },
+    { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
+    { linkText: 'Team', linkTarget: '/team' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'JOIN', linkTarget: '/join' },
+  ],
+};
 
 const TeamPage = () => {
   const templateArgs = {

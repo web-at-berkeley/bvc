@@ -3,7 +3,18 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ContactTemplate } from '../templates';
-import { navLinks } from './navlinks';
+
+const navLinks = {
+  pages: [
+    { linkText: 'Services', linkTarget: '/services' },
+    { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
+    { linkText: 'Team', linkTarget: '/team' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'JOIN', linkTarget: '/join' },
+  ],
+};
+
 const ContactPage = () => {
   const templateArgs = {
     title: 'Get In Touch With Us',

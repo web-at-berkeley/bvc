@@ -17,7 +17,18 @@ import salesforce from '../assets/logos/salesforce.png';
 import amazon from '../assets/logos/amazon.png';
 import jpmorgan from '../assets/logos/jpmorgan.png';
 import ey from '../assets/logos/ey.png';
-import { navLinks } from './navlinks';
+
+const navLinks = {
+  pages: [
+    { linkText: 'Services', linkTarget: '/services' },
+    { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
+    { linkText: 'Team', linkTarget: '/team' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'JOIN', linkTarget: '/join' },
+  ],
+};
+
 const IndexPage = () => {
   const templateArgs: HomeTemplateProps = {
     navLinks: navLinks,

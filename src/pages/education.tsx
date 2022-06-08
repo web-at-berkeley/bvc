@@ -3,9 +3,20 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { EducationTemplate } from '../templates';
-import { navLinks } from './navlinks';
 import leal from '../assets/teamphotos/leal.png';
 import sobkin from '../assets/teamphotos/sobkin.png';
+
+const navLinks = {
+  pages: [
+    { linkText: 'Services', linkTarget: '/services' },
+    { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
+    { linkText: 'Team', linkTarget: '/team' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'JOIN', linkTarget: '/join' },
+  ],
+};
+
 const EducationPage = () => {
   const templateArgs = {
     title: 'Education',

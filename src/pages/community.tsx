@@ -3,7 +3,6 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { CommunityTemplate } from '../templates';
-import { navLinks } from './navlinks';
 import congruent from '../assets/logos2/congruent.png';
 import crv from '../assets/logos2/crv.png';
 import lux from '../assets/logos2/lux.png';
@@ -22,6 +21,18 @@ import mitra from '../assets/faces/mitra.png';
 import patel from '../assets/faces/patel.png';
 import thacker from '../assets/faces/thacker.png';
 import weil from '../assets/faces/weil.png';
+
+const navLinks = {
+  pages: [
+    { linkText: 'Services', linkTarget: '/services' },
+    { linkText: 'Education', linkTarget: '/education' },
+    { linkText: 'Community', linkTarget: '/community' },
+    { linkText: 'Team', linkTarget: '/team' },
+    { linkText: 'Contact', linkTarget: '/contact' },
+    { linkText: 'JOIN', linkTarget: '/join' },
+  ],
+};
+
 const CommunityPage = () => {
   const templateArgs = {
     title: 'Community',
