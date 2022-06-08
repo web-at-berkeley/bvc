@@ -18,27 +18,34 @@ const iconProps = {
   size: '25px',
 };
 
-export const Footer = ({ facebook, instagram, linkedin, email }: FooterProps) => (
-  <Flex w="100%" h="118" backgroundColor="#464646" align="center" justify="space-between" p="0 121px">
-    <HStack spacing="30px">
-      <Link href={facebook} isExternal>
+export const Footer = () => (
+  <Flex
+    w="100%"
+    h="118"
+    backgroundColor="blue"
+    align="center"
+    justify="space-between"
+    p={['0 3%', '0 5%', '0 8%', '0 8%']}
+  >
+    <HStack spacing={['10px', '20px', '20px', '30px']}>
+      <Link href={'https://www.facebook.com/ucberkeleyventurecapital'} isExternal>
         <FiFacebook {...iconProps} />
       </Link>
-      <Link href={instagram} isExternal>
+      <Link href={'https://instagram.com/berkeley_venture_capital?igshid=YmMyMTA2M2Y='} isExternal>
         <FiInstagram {...iconProps} />
       </Link>
-      <Link href={linkedin} isExternal>
+      <Link href={'https://www.linkedin.com/company/berkeley-venture-capital/'} isExternal>
         <FiLinkedin {...iconProps} />
       </Link>
-      <Link href={email} isExternal>
+      <Link href={'berkeleyventurecap@gmail.com '} isExternal>
         <FiMail {...iconProps} />
       </Link>
     </HStack>
-    <Text textStyle="bodyLarge" color="white">
+    <Text width={['80px', 'auto', 'auto', 'auto']} textStyle="bodyLarge" color="white">
       ©2022 BVC
     </Text>
     <Link href="https://webatberkeley.org/" isExternal>
-      <Image h="62px" src={badge} />
+      <Image h={['40px', '50px', '62px', '62px']} src={badge} />
     </Link>
   </Flex>
 );
