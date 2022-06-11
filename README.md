@@ -4,51 +4,83 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Berkeley Venture Capital – Static Site Source Code
 </h1>
+This React App was designed and developed by [Web Development at Berkeley](https://webatberkeley.org/). The React flavor is [Gatsby](https://www.gatsbyjs.com/docs/), and the components are from [Chakra UI](https://chakra-ui.com/docs/components/overview). [Storybook](https://storybook.js.org/) was used for some components.
 
-## 🚀 Quick start
+# Introduction
 
-1.  **Create a Gatsby site.**
+## 🚀 Quick Start
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+First-Time Setup
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- Clone the repo from GitHub
+- Ensure `yarn` is installed on your machine
+- `yarn global add gatsby-cli` to install the Gatsby CLI
+- In `~/.config/gatsby/config.json`, add the following to make Gatsby use Yarn
+  ```json
+  {
+    "cli": {
+      "packageManager": "yarn"
+    }
+  }
+  ```
 
-2.  **Start developing.**
+First-Time or After Pulling New Code
 
-    Navigate into your new site’s directory and start it up.
+- `yarn` to install libraries
+- `yarn develop` to start the main web app
+- `yarn storybook` to see the storybook
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## ✏️ How to Make Common Changes
 
-3.  **Open the code and start customizing!**
+### Updating Text
 
-    Your site is now running at http://localhost:8000!
+...
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+### Replacing a Link
 
-4.  **Learn more**
+...
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Replacing an Image
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+...
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+# Detailed Information
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 📚 Organization
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Here is a partial map of the directory stucture.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```
+BVC/
+├── src/
+│   ├── assets/
+│   │   └── ...
+│   ├── components/
+│   │   └── ...
+│   ├── fonts/
+│   │   └── ...
+│   ├── pages/
+│   │   └── ...
+│   ├── templates/
+│   │   └── ...
+│   └── theme/
+│       └── ...
+├── ...
+├── package.json
+└── yarn.lock
+```
 
-## 🚀 Quick start (Gatsby Cloud)
+Notable folders:
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+- `pages` are top-level React components that inject data (images, titles, captions) into templates
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- `templates` are top-level React components that give context to data by passing it to smaller components and organizing the overall layout
+
+- `components` are smaller React components that can be re-used throughout the app
+
+- `assets` contains images and logos
+
+- `fonts` is where typefaces are imported [according to the Chakra docs](https://chakra-ui.com/docs/styled-system/recipes/using-fonts#option-2-using-font-face)
+- `theme` defines the site's typography, color scheme, and [custom styling for Chakra components](https://chakra-ui.com/docs/styled-system/theming/customize-theme)
