@@ -47,6 +47,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
         <VStack
           w="100%"
           backgroundImage={heroImg}
+          backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
           color="#FFFFFF"
