@@ -52,7 +52,8 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           backgroundSize="cover"
           color="#FFFFFF"
           paddingBottom={['300px', '300px', '300px', '700px']}
-          paddingLeft="70px"
+          paddingLeft={['70px', '70px', '70px', '70px']}
+          paddingRight={['70px', '70px', '70px', '70px']}
           margin="0"
           align="start"
         >
