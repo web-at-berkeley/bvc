@@ -8,7 +8,7 @@ import leal from '../assets/teamphotos/leal.png';
 import sobkin from '../assets/teamphotos/sobkin.png';
 
 const EducationPage = () => {
-  const templateArgs = {
+  const content = {
     title: 'Education',
     section1Body:
       'We uphold venture education at Cal through our intricately designed decal course along with our internal exclusive fellowship. With a good blend of education and experience, our programs are created to foster the spirit of venture analysis amongst Cal students.',
@@ -33,7 +33,7 @@ const EducationPage = () => {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <EducationTemplate {...templateArgs} />
+        <EducationTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>
   );

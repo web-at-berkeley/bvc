@@ -6,7 +6,7 @@ import { NAV_LINKS, FOOTER_LINKS } from './index';
 import { ContactTemplate } from '../templates';
 
 const ContactPage = () => {
-  const templateArgs = {
+  const content = {
     title: 'Get In Touch With Us',
     subtitle: [
       'Interested in learning more about us? For all questions regarding client projects, fellowship curriculum, DeCal, or other general inquires, please fill out this form and we’ll reach out to you or your organization.',
@@ -22,7 +22,7 @@ const ContactPage = () => {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <ContactTemplate {...templateArgs} />
+        <ContactTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>
   );

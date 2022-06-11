@@ -1,24 +1,24 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
 import { VStack, Text, Box, Image, Button, Stack, Center, Link as ChakraLink } from '@chakra-ui/react';
-import { Header, Footer, IconCard, HeaderProps, PageWrapper, Billboard } from '../components';
+import { Header, Footer, IconCard, HeaderProps, PageWrapper, Billboard, IconCardProps } from '../components';
 import { Link } from 'gatsby';
-import courtyard from '../assets/images/courtyard.png';
-import all_logos from '../assets/logos/all_logos.png';
 import FadeIn from 'react-fade-in';
 export type HomeTemplateProps = {
   navLinks: HeaderProps;
   title: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   heroImg: any;
   subtitle: string;
   section1Title: string;
-  section1Body: string;
+  section1Body: React.ReactNode;
+  partnerImage: any;
+  partnerText: string;
   section2Title: string;
-  section2Body: string;
-  section2Cards: string[][];
+  section2Body: React.ReactNode;
+  section2Cards: IconCardProps[];
   section3Title: string;
-  section3Slider: string[][];
+  section3Image: any;
   logos: any[];
   footerLinks: string[];
 };
@@ -29,8 +29,14 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
   heroImg,
   subtitle,
   section1Title,
+  section1Body,
+  partnerImage,
+  partnerText,
   section2Title,
+  section2Body,
   section2Cards,
+  section3Title,
+  section3Image,
   footerLinks,
 }: HomeTemplateProps) => {
   return (
@@ -71,13 +77,8 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
               </Text>
             </Center>
 
-            <Text position="relative" left="20px" textStyle="bodyLarge">
-              <Text as="span" fontWeight="700" textStyle="bodyLarge">
-                Berkeley Venture Capital
-              </Text>
-              {
-                " is a student-run organization that aims to develop students' interest in venture capital and startup activity on campus. We felt the need to address Berkeley students' ingenuity in engineering, analysis and business management with an equally developed venture capital student organization to serve student's needs when exploring the Bay Area's VC landscape."
-              }
+            <Text position="relative" textStyle="bodyLarge">
+              {section1Body}
             </Text>
           </VStack>
 
@@ -90,7 +91,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           >
             <Image
               shadow="3px 3px 5px 3px #00000033"
-              src={courtyard}
+              src={partnerImage}
               width="250px"
               mr={[0, 0, '0px', '100px']}
               mb="30px"
@@ -102,7 +103,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
                 fontSize="40px"
                 casing="uppercase"
               >
-                we are backed by Courtyard ventures, A Haas MBA student-run fund.
+                {partnerText}
               </Text>
               <ChakraLink
                 style={{ textDecoration: 'none' }}
@@ -121,8 +122,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
                 {section2Title}
               </Text>
               <Text top="30px" position="relative" color="white" textStyle="bodyLarge">
-                Our core activities are guided by our core goals: <b>Educating</b> and <b>Developing</b> our members,
-                while building a <b>Community</b> between ourselves and our collaborators.
+                {section2Body}
               </Text>
             </VStack>
           </Box>
@@ -137,7 +137,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
             maxW="90%"
             width="90%"
           >
-            {section2Cards.map(([icon, title, body], i) => (
+            {section2Cards.map(({ icon, title, body }, i) => (
               <Link style={{ textDecoration: 'none' }} key={i} to={'/' + title}>
                 <IconCard icon={icon} title={title} body={body} />
               </Link>
@@ -146,14 +146,9 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
         </VStack>
         <VStack w="100%" h="450" backgroundColor="#F6F6F6" justify="space-around">
           <Text position="relative" top="50px" textAlign="center" textStyle="h3" casing="uppercase">
-            Members Recieve Offers From
+            {section3Title}
           </Text>
-          <Image width={['100%', '100%', '100%', '70%']} src={all_logos} m="0" />
-          {/* <Flex justify="space-around" align="space-around" spacing="100px" wrap="wrap">
-          {logos.map((logo, idx) => (
-            <Image boxSize="100px" key={idx} src={logo} />
-          ))}
-        </Flex> */}
+          <Image width={['100%', '100%', '100%', '70%']} src={section3Image} m="0" />
         </VStack>
 
         <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />

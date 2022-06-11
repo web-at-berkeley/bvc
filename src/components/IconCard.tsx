@@ -5,7 +5,7 @@ import { Box, Image, Text } from '@chakra-ui/react';
 export type IconCardProps = {
   icon: string;
   title: string;
-  body: string;
+  body: React.ReactNode;
 };
 
 export const IconCard = ({ icon, title, body }: IconCardProps) => {

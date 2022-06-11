@@ -24,7 +24,7 @@ import thacker from '../assets/faces/thacker.png';
 import weil from '../assets/faces/weil.png';
 
 const CommunityPage = () => {
-  const templateArgs = {
+  const content = {
     title: 'Community',
     section1Body: [
       'One of the ways in which we aim to grow and foster our community is through our speaker series. We host startup founders, experienced angel investors and leading venture capitalists alongside other industry experts who work at the intersection with startups like lawyers, corporate venture managers and investment bankers dealing with mergers and acquisitions.',
@@ -101,7 +101,7 @@ const CommunityPage = () => {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <CommunityTemplate {...templateArgs} />
+        <CommunityTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>
   );
