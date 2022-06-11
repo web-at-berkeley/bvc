@@ -18,7 +18,8 @@ import amazon from '../assets/logos/amazon.png';
 import jpmorgan from '../assets/logos/jpmorgan.png';
 import ey from '../assets/logos/ey.png';
 
-const navLinks = {
+// Changing here will change in all pages
+export const NAV_LINKS = {
   pages: [
     { linkText: 'Services', linkTarget: '/services' },
     { linkText: 'Education', linkTarget: '/education' },
@@ -29,9 +30,17 @@ const navLinks = {
   ],
 };
 
+// Changing here will change in all pages
+export const FOOTER_LINKS = [
+  'https://www.facebook.com/',
+  'https://www.instagram.com/',
+  'https://www.linkedin.com/',
+  'email@example.com',
+];
+
 const IndexPage = () => {
-  const templateArgs: HomeTemplateProps = {
-    navLinks: navLinks,
+  const content: HomeTemplateProps = {
+    navLinks: NAV_LINKS,
     title: 'Berkeley Venture Capital',
     heroImg: heroImg,
     subtitle: "Cal's Only Undergraduate VC Organization",
@@ -66,19 +75,14 @@ const IndexPage = () => {
       ],
     ],
     logos: [square, citi, salesforce, deutche, mastercard, amazon, jpmorgan, intuit, ey],
-    footerLinks: [
-      'https://www.facebook.com/',
-      'https://www.instagram.com/',
-      'https://www.linkedin.com/',
-      'email@example.com',
-    ],
+    footerLinks: FOOTER_LINKS,
   };
 
   return (
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <HomeTemplate {...templateArgs} />
+        <HomeTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>
   );

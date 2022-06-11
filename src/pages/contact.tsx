@@ -2,18 +2,8 @@ import * as React from 'react';
 import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
+import { NAV_LINKS, FOOTER_LINKS } from './index';
 import { ContactTemplate } from '../templates';
-
-const navLinks = {
-  pages: [
-    { linkText: 'Services', linkTarget: '/services' },
-    { linkText: 'Education', linkTarget: '/education' },
-    { linkText: 'Community', linkTarget: '/community' },
-    { linkText: 'Team', linkTarget: '/team' },
-    { linkText: 'Contact', linkTarget: '/contact' },
-    { linkText: 'JOIN', linkTarget: '/join' },
-  ],
-};
 
 const ContactPage = () => {
   const templateArgs = {
@@ -24,13 +14,8 @@ const ContactPage = () => {
       'Additionally, the Berkeley Venture Capital welcomes professional development partnerships at any given time.',
     ],
     tabLabels: ['Student', 'Client'],
-    navLinks: navLinks,
-    footerLinks: [
-      'https://www.facebook.com/',
-      'https://www.instagram.com/',
-      'https://www.linkedin.com/',
-      'email@example.com',
-    ],
+    navLinks: NAV_LINKS,
+    footerLinks: FOOTER_LINKS,
   };
 
   return (

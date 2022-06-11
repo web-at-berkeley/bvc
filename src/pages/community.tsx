@@ -3,6 +3,7 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { CommunityTemplate } from '../templates';
+import { NAV_LINKS, FOOTER_LINKS } from './index';
 import congruent from '../assets/logos2/congruent.png';
 import crv from '../assets/logos2/crv.png';
 import lux from '../assets/logos2/lux.png';
@@ -22,17 +23,6 @@ import patel from '../assets/faces/patel.png';
 import thacker from '../assets/faces/thacker.png';
 import weil from '../assets/faces/weil.png';
 
-const navLinks = {
-  pages: [
-    { linkText: 'Services', linkTarget: '/services' },
-    { linkText: 'Education', linkTarget: '/education' },
-    { linkText: 'Community', linkTarget: '/community' },
-    { linkText: 'Team', linkTarget: '/team' },
-    { linkText: 'Contact', linkTarget: '/contact' },
-    { linkText: 'JOIN', linkTarget: '/join' },
-  ],
-};
-
 const CommunityPage = () => {
   const templateArgs = {
     title: 'Community',
@@ -44,13 +34,8 @@ const CommunityPage = () => {
       'A large part of our community building efforts is driven in a direction to help student and alumni founders gain visibility and make connections with the VC world.',
     ],
     highlightTitle: "We've hosted speakers from",
-    navLinks: navLinks,
-    footerLinks: [
-      'https://www.facebook.com/',
-      'https://www.instagram.com/',
-      'https://www.linkedin.com/',
-      'email@example.com',
-    ],
+    navLinks: NAV_LINKS,
+    footerLinks: FOOTER_LINKS,
     logos: [blumberg, olympic, shasta, accel, mayfield, lux, congruent, crv, presidio, alphaWave],
     people: [
       {

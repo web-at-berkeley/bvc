@@ -3,6 +3,7 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { ServiceTemplate } from '../templates';
+import { NAV_LINKS, FOOTER_LINKS } from './index';
 import quad1 from '../assets/images/quad1.png';
 import quad2 from '../assets/images/quad2.png';
 import quad3 from '../assets/images/quad3.png';
@@ -15,23 +16,12 @@ import image19 from '../assets/logos3/image19.png';
 import image20 from '../assets/logos3/image20.png';
 import image21 from '../assets/logos3/image21.png';
 
-const navLinks = {
-  pages: [
-    { linkText: 'Services', linkTarget: '/services' },
-    { linkText: 'Education', linkTarget: '/education' },
-    { linkText: 'Community', linkTarget: '/community' },
-    { linkText: 'Team', linkTarget: '/team' },
-    { linkText: 'Contact', linkTarget: '/contact' },
-    { linkText: 'JOIN', linkTarget: '/join' },
-  ],
-};
-
 const ContactPage = () => {
-  const templateArgs = {
+  const content = {
     title: 'Services',
     section1Body:
       'BVC’s Professional Services vertical was created with the idea of helping VC’s outsource some of their internal projects in sourcing, segment analysis, and due diligence to our experienced team. New projects begin near the start of each semester. We look to provide a variety of services to firms who are interested, ranging from software building and data science projects to more conventional VC functions like sourcing and supporting the due-diligence process.',
-    navLinks: navLinks,
+    navLinks: NAV_LINKS,
     tab1Label: 'Professional Services',
     tab2Label: 'Events',
     tab1Title: 'BVC Fellowship Demo Day',
@@ -39,12 +29,7 @@ const ContactPage = () => {
     tab1Body:
       'Our annual showpiece event, the Berkeley Venture Capital Demo Day features 11 analysts and their sourced startups alongside vertical analysis. Our fellows present their investment theses, alongside the four mentors. Our past events have included an audience of 20+ VCs alongside professors and students from Harvard, Stanford and New York University.',
 
-    footerLinks: [
-      'https://www.facebook.com/',
-      'https://www.instagram.com/',
-      'https://www.linkedin.com/',
-      'email@example.com',
-    ],
+    footerLinks: FOOTER_LINKS,
     quadImages: [quad1, quad2, quad3, quad4],
     quadTitles: ['Sourcing', 'Due Diligence', 'Valuation', 'Portfolio Consulting'],
     wideCardTitle1: 'For Clients',
@@ -76,7 +61,7 @@ const ContactPage = () => {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <ServiceTemplate {...templateArgs} />
+        <ServiceTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>
   );

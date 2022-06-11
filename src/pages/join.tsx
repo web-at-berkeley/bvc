@@ -3,21 +3,11 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { JoinTemplate, JoinTemplateProps } from '../templates';
-
-const navLinks = {
-  pages: [
-    { linkText: 'Services', linkTarget: '/services' },
-    { linkText: 'Education', linkTarget: '/education' },
-    { linkText: 'Community', linkTarget: '/community' },
-    { linkText: 'Team', linkTarget: '/team' },
-    { linkText: 'Contact', linkTarget: '/contact' },
-    { linkText: 'JOIN', linkTarget: '/join' },
-  ],
-};
+import { NAV_LINKS } from './index';
 
 const JoinPage = () => {
-  const templateArgs: JoinTemplateProps = {
-    navLinks: navLinks,
+  const content: JoinTemplateProps = {
+    navLinks: NAV_LINKS,
     events: [
       'coffee chats start',
       'infosession 1',
@@ -32,7 +22,7 @@ const JoinPage = () => {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
-        <JoinTemplate {...templateArgs} />
+        <JoinTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>
   );
