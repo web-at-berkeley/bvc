@@ -56,7 +56,7 @@ export const content: HomeTemplateProps = {
     </p>
   ),
   partnerImage: courtyard,
-  partnerText: 'we are parnered with Courtyard ventures, A Haas MBA student-run fund.',
+  partnerText: 'we are partnered with Courtyard ventures, A Haas MBA student-run fund.',
   section2Title: 'Our Pillars',
   section2Body: (
     <p>
