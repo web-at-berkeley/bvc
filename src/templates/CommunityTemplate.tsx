@@ -17,7 +17,7 @@ import { Item } from 'framer-motion/types/components/Reorder/Item';
 interface CommunityTemplateProps {
   title: string;
   highlightTitle: string;
-  section1Body: string[];
+  section1Body: React.ReactNode[];
   navLinks: HeaderProps;
   footerLinks: string[];
   logos: any[];
@@ -41,15 +41,11 @@ export const CommunityTemplate = ({
           <Text fontSize={['40px', '50px', '76px']} textStyle="h1" casing="uppercase" marginTop="70px">
             {title}
           </Text>
-          <Text textStyle="bodyLarge" mb="20px">
-            {section1Body[0]}
-          </Text>
-          <Text textStyle="bodyLarge" mb="40px">
-            {section1Body[1]}
-          </Text>
-          <Text textStyle="bodyLarge" mb="20px">
-            {section1Body[2]}
-          </Text>
+          {section1Body.map((paragraph, i) => (
+            <Text textStyle="bodyLarge" mb={i === 1 ? '40px' : '20px'} key={i}>
+              {paragraph}
+            </Text>
+          ))}
         </VStack>
         <Box mt="75px" backgroundColor="lightGray" w="100%" p="20px 100px">
           <Box mt="50px">

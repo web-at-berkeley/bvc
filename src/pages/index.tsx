@@ -21,7 +21,7 @@ import amazon from '../assets/logos/amazon.png';
 import jpmorgan from '../assets/logos/jpmorgan.png';
 import ey from '../assets/logos/ey.png';
 
-// Changing here will change in all pages
+// These are used across all pages as well as storybook
 export const NAV_LINKS = {
   pages: [
     { linkText: 'Services', linkTarget: '/services' },
@@ -33,7 +33,7 @@ export const NAV_LINKS = {
   ],
 };
 
-// Changing here will change in all pages
+// These are used across all pages as well as storybook
 export const FOOTER_LINKS = [
   'https://www.facebook.com/',
   'https://www.instagram.com/',
