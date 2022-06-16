@@ -2,7 +2,7 @@ import * as React from 'react';
 import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
-import { NAV_LINKS, FOOTER_LINKS } from './index';
+import { HOME_NAV, HOME_FOOTER } from './index';
 import { ContactTemplate } from '../templates';
 
 const ContactPage = () => {
@@ -14,8 +14,8 @@ const ContactPage = () => {
       'Additionally, the Berkeley Venture Capital welcomes professional development partnerships at any given time.',
     ],
     tabLabels: ['Student', 'Client'],
-    navLinks: NAV_LINKS,
-    footerLinks: FOOTER_LINKS,
+    navLinks: HOME_NAV,
+    footerLinks: HOME_FOOTER,
   };
 
   return (

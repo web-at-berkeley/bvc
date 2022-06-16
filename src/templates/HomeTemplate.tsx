@@ -2,7 +2,16 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
 import { VStack, Text, Box, Image, Button, Stack, Center, Link as ChakraLink } from '@chakra-ui/react';
-import { Header, Footer, IconCard, HeaderProps, PageWrapper, Billboard, IconCardProps } from '../components';
+import {
+  Header,
+  Footer,
+  IconCard,
+  HeaderProps,
+  PageWrapper,
+  Billboard,
+  IconCardProps,
+  FooterProps,
+} from '../components';
 import { Link } from 'gatsby';
 import FadeIn from 'react-fade-in';
 export type HomeTemplateProps = {
@@ -20,7 +29,7 @@ export type HomeTemplateProps = {
   section3Title: string;
   section3Image: any;
   logos: any[];
-  footerLinks: string[];
+  footerLinks: FooterProps;
 };
 
 export const HomeTemplate: React.FC<HomeTemplateProps> = ({
@@ -153,7 +162,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           <Image width={['100%', '100%', '100%', '70%']} src={section3Image} m="0" />
         </VStack>
 
-        <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />
+        <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>
   );

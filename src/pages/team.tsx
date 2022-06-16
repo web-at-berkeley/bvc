@@ -3,7 +3,7 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { TeamTemplate } from '../templates';
-import { NAV_LINKS, FOOTER_LINKS } from './index';
+import { HOME_NAV, HOME_FOOTER } from './index';
 import dua from '../assets/teamphotos/dua.png';
 import ferrufino from '../assets/teamphotos/ferrufino.png';
 import garg from '../assets/teamphotos/garg.png';
@@ -69,8 +69,8 @@ const TeamPage = () => {
     bottomText:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. A interdum ac maecenas felis cras odio. Tellus lectus mollis at ultricies velit eu consequat, donec nibh. At quis habitant vel donec purus. Volutpat ac amet, morbi nibh diam tincidunt sed dolor. Convallis aenean et eget sed.',
     bottomText2: 'Lorem ipsum dolor sit amet, consectetur adipiscing?',
-    navLinks: NAV_LINKS,
-    footerLinks: FOOTER_LINKS,
+    navLinks: HOME_NAV,
+    footerLinks: HOME_FOOTER,
   };
 
   return (

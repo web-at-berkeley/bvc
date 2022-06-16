@@ -1,25 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react';
-import { Box, Flex, Text, VStack, Spacer, HStack, TabList, Tabs, Tab, Image } from '@chakra-ui/react';
-import CommunityImg from '../assets/images/Ellipse.png';
-import {
-  Collage,
-  CommunityCard,
-  EducationCarosel,
-  Footer,
-  Header,
-  HeaderProps,
-  PageWrapper,
-  TabsSection,
-} from '../components';
+import React from 'react';
+import { Box, Flex, Text, VStack, Image } from '@chakra-ui/react';
+import { CommunityCard, Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
 import FadeIn from 'react-fade-in';
-import { Item } from 'framer-motion/types/components/Reorder/Item';
 interface CommunityTemplateProps {
   title: string;
   highlightTitle: string;
   section1Body: React.ReactNode[];
   navLinks: HeaderProps;
-  footerLinks: string[];
+  footerLinks: FooterProps;
   logos: any[];
   people: any[];
 }
@@ -79,7 +68,7 @@ export const CommunityTemplate = ({
             <CommunityCard key={idx} title={item.name} body={item.cardContent} image={item.face} to={item.link} />
           ))}
         </Flex>
-        <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />
+        <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>
   );

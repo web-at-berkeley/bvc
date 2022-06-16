@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text, VStack, Spacer, Tabs, TabList, Tab, Stack } from '@chakra-ui/react';
-import { ContactForm, Footer, Header, HeaderProps, PageWrapper } from '../components';
+import { ContactForm, Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
 import FadeIn from 'react-fade-in';
 
 interface ContactTemplateProps {
@@ -8,10 +8,10 @@ interface ContactTemplateProps {
   subtitle: string[];
   tabLabels: string[];
   navLinks: HeaderProps;
-  footerLinks: string[];
+  footerLinks: FooterProps;
 }
 
-export const ContactTemplate = ({ title, tabLabels, navLinks }: ContactTemplateProps) => {
+export const ContactTemplate = ({ title, tabLabels, navLinks, footerLinks }: ContactTemplateProps) => {
   const [tabIndex, setTabIndex] = React.useState(0);
   return (
     <PageWrapper>
@@ -65,7 +65,7 @@ export const ContactTemplate = ({ title, tabLabels, navLinks }: ContactTemplateP
           </Stack>
         </VStack>
         <Spacer />
-        <Footer />
+        <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>
   );

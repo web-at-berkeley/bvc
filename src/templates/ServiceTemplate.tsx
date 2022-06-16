@@ -9,6 +9,7 @@ import {
   BlueBanner,
   PartnerBanner,
   SquareCompany,
+  FooterProps,
 } from '../components';
 import serviceImg1 from '../assets/images/serviceImg1.png';
 import serviceImg2 from '../assets/images/serviceImg2.png';
@@ -20,7 +21,7 @@ interface ServiceTemplateProps {
   section1Body: string;
   navLinks: HeaderProps;
   tab1Title: string;
-  footerLinks: string[];
+  footerLinks: FooterProps;
   tab1Label: string;
   quadImages: any[];
   quadTitles: string[];
@@ -51,6 +52,7 @@ export const ServiceTemplate = ({
   bottomPic,
   bottomTitle,
   bottomText,
+  footerLinks,
   squareCompanies,
 }: ServiceTemplateProps) => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -143,7 +145,7 @@ export const ServiceTemplate = ({
             </VStack>
           </Box>
         )}
-        <Footer />
+        <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>
   );

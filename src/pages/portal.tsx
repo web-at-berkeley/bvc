@@ -3,11 +3,11 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { Box, ChakraProvider } from '@chakra-ui/react';
 import { PortalTemplate, PortalTemplateProps } from '../templates';
-import { NAV_LINKS } from './index';
+import { HOME_NAV } from './index';
 
 const PortalPage = () => {
   const content: PortalTemplateProps = {
-    navLinks: NAV_LINKS,
+    navLinks: HOME_NAV,
   };
 
   return (

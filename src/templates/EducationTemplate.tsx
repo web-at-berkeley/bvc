@@ -16,7 +16,7 @@ import {
   Link,
   Center,
 } from '@chakra-ui/react';
-import { Footer, Header, HeaderProps, PageWrapper, TabsSection, TeamCard } from '../components';
+import { Footer, FooterProps, Header, HeaderProps, PageWrapper, TabsSection, TeamCard } from '../components';
 import bvcFellows from '../assets/images/bvcFellows.png';
 import FadeIn from 'react-fade-in';
 interface EducationTemplateProps {
@@ -27,7 +27,7 @@ interface EducationTemplateProps {
   tab2Body: string;
   section1Body: string;
   navLinks: HeaderProps;
-  footerLinks: string[];
+  footerLinks: FooterProps;
   people: any[];
 }
 
@@ -131,7 +131,7 @@ export const EducationTemplate = ({
           </Stack>
         )}
 
-        <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />
+        <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>
   );

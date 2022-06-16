@@ -3,7 +3,7 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { CommunityTemplate } from '../templates';
-import { NAV_LINKS, FOOTER_LINKS } from './index';
+import { HOME_NAV, HOME_FOOTER } from './index';
 import congruent from '../assets/logos2/congruent.png';
 import crv from '../assets/logos2/crv.png';
 import lux from '../assets/logos2/lux.png';
@@ -24,7 +24,7 @@ import thacker from '../assets/faces/thacker.png';
 import weil from '../assets/faces/weil.png';
 
 export const content = {
-  navLinks: NAV_LINKS,
+  navLinks: HOME_NAV,
   title: 'Community',
   section1Body: [
     <p key={1}>
@@ -104,7 +104,7 @@ export const content = {
         'A UC Berkeley alumnus, Patel joined Bow as part of the founding team after working at Looker and TIBCO, helping clients solve their most challenging data problems. He also helps invest in startups from Cal through his fund Bow Capital.',
     },
   ],
-  footerLinks: FOOTER_LINKS,
+  footerLinks: HOME_FOOTER,
 };
 
 const CommunityPage = () => {

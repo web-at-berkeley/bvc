@@ -22,7 +22,7 @@ import jpmorgan from '../assets/logos/jpmorgan.png';
 import ey from '../assets/logos/ey.png';
 
 // These are used across all pages as well as storybook
-export const NAV_LINKS = {
+export const HOME_NAV = {
   pages: [
     { linkText: 'Services', linkTarget: '/services' },
     { linkText: 'Education', linkTarget: '/education' },
@@ -34,15 +34,15 @@ export const NAV_LINKS = {
 };
 
 // These are used across all pages as well as storybook
-export const FOOTER_LINKS = [
-  'https://www.facebook.com/',
-  'https://www.instagram.com/',
-  'https://www.linkedin.com/',
-  'email@example.com',
-];
+export const HOME_FOOTER = {
+  facebook: 'https://www.facebook.com/',
+  instagram: 'https://www.instagram.com/',
+  linkedin: 'https://www.linkedin.com/',
+  email: 'email@example.com',
+};
 
 export const content: HomeTemplateProps = {
-  navLinks: NAV_LINKS,
+  navLinks: HOME_NAV,
   title: 'Berkeley Venture Capital',
   heroImg: heroImg,
   subtitle: "Cal's Only Undergraduate VC Organization",
@@ -102,7 +102,7 @@ export const content: HomeTemplateProps = {
   section3Title: 'Members Recieve Offers From',
   section3Image: all_logos,
   logos: [square, citi, salesforce, deutche, mastercard, amazon, jpmorgan, intuit, ey],
-  footerLinks: FOOTER_LINKS,
+  footerLinks: HOME_FOOTER,
 };
 
 const IndexPage = () => {

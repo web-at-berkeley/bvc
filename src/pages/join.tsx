@@ -3,11 +3,11 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { JoinTemplate, JoinTemplateProps } from '../templates';
-import { NAV_LINKS } from './index';
+import { HOME_NAV } from './index';
 
 const JoinPage = () => {
   const content: JoinTemplateProps = {
-    navLinks: NAV_LINKS,
+    navLinks: HOME_NAV,
     events: [
       'coffee chats start',
       'infosession 1',

@@ -1,13 +1,13 @@
 import React from 'react';
 import { VStack, Wrap, WrapItem, Text } from '@chakra-ui/react';
-import { Footer, Header, HeaderProps, TeamCard, TeamCardProps, PageWrapper } from '../components';
+import { Footer, Header, HeaderProps, TeamCard, TeamCardProps, PageWrapper, FooterProps } from '../components';
 import FadeIn from 'react-fade-in';
 
 interface TeamTemplateProps {
   title: string;
   people: TeamCardProps[];
   navLinks: HeaderProps;
-  footerLinks: string[];
+  footerLinks: FooterProps;
 }
 
 export const TeamTemplate = ({ title, people, navLinks, footerLinks }: TeamTemplateProps) => {
@@ -51,7 +51,7 @@ export const TeamTemplate = ({ title, people, navLinks, footerLinks }: TeamTempl
             )}
           </Wrap>
         </VStack>
-        <Footer facebook={footerLinks[0]} instagram={footerLinks[1]} linkedin={footerLinks[2]} email={footerLinks[3]} />
+        <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>
   );
