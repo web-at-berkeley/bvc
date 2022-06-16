@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import * as React from 'react';
 import theme from '../theme';
 import Fonts from '../fonts';
@@ -7,14 +8,34 @@ import { ContactTemplate } from '../templates';
 
 const ContactPage = () => {
   const content = {
-    title: 'Get In Touch With Us',
-    subtitle: [
-      'Interested in learning more about us? For all questions regarding client projects, fellowship curriculum, DeCal, or other general inquires, please fill out this form and we’ll reach out to you or your organization.',
-
-      'Additionally, the Berkeley Venture Capital welcomes professional development partnerships at any given time.',
-    ],
-    tabLabels: ['Student', 'Client'],
     navLinks: HOME_NAV,
+    title: 'Get In Touch With Us',
+    tabs: [
+      {
+        label: 'Student',
+        leftText: (
+          <p>
+            Interested in learning more about us and potentially partnering with BVC? We welcome all professional
+            partnerships! Fill out the form on the right, and we will reach out to you within 1-3 business days.
+            <br />
+            <br />
+            <b>For recruitment and curricular inquiries, please select "Student."</b>
+          </p>
+        ),
+      },
+      {
+        label: 'Client',
+        leftText: (
+          <p>
+            Questions about recruitment, DeCal, fellowship curriculum, etc.? Fill out the form on the right, and we will
+            reach out to you!
+            <br />
+            <br />
+            <b>For organization/corporate partnership inquiries, please select "Client."</b>
+          </p>
+        ),
+      },
+    ],
     footerLinks: HOME_FOOTER,
   };
 

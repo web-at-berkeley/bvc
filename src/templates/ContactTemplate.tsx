@@ -3,15 +3,18 @@ import { Box, Text, VStack, Spacer, Tabs, TabList, Tab, Stack } from '@chakra-ui
 import { ContactForm, Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
 import FadeIn from 'react-fade-in';
 
+export type ContactTabProps = {
+  label: string;
+  leftText: React.ReactNode;
+};
 interface ContactTemplateProps {
   title: string;
-  subtitle: string[];
-  tabLabels: string[];
+  tabs: ContactTabProps[];
   navLinks: HeaderProps;
   footerLinks: FooterProps;
 }
 
-export const ContactTemplate = ({ title, tabLabels, navLinks, footerLinks }: ContactTemplateProps) => {
+export const ContactTemplate = ({ title, tabs, navLinks, footerLinks }: ContactTemplateProps) => {
   const [tabIndex, setTabIndex] = React.useState(0);
   return (
     <PageWrapper>
@@ -30,31 +33,26 @@ export const ContactTemplate = ({ title, tabLabels, navLinks, footerLinks }: Con
           >
             <VStack minWidth="50%">
               <Text w="100%" textStyle="bodyLarge">
-                {tabIndex
-                  ? 'Questions about recruitment, DeCal, fellowship curriculum, etc.? Fill out the form on the right, and we will reach out to you! '
-                  : 'Interested in learning more about us and potentially partnering with BVC? We welcome all professional partnerships! Fill out the form on the right, and we will reach out to you within 1-3 business days.'}
-              </Text>
-              <Text fontWeight="700" w="100%" textStyle="bodyLarge">
-                {tabIndex
-                  ? 'For organization/corporate partnership inquiries, please select "Client."'
-                  : 'For recruitment and curricular inquiries, please select "Student."'}
+                {tabs[tabIndex].leftText}
               </Text>
             </VStack>
 
             <VStack w="100%" align="start" spacing="77px">
               <Box>
-                <Tabs index={tabIndex} w="100%" onChange={(index) => setTabIndex(index)}>
+                <Tabs index={tabIndex} w="100%" onChange={(index: number) => setTabIndex(index)}>
                   <TabList>
-                    <Tab _selected={{ border: 'solid 2.5px #000057', borderRadius: '10px' }} padding="20px" mr="50px">
-                      <Text m="auto" textStyle="h5" casing="uppercase" fontWeight="600">
-                        {tabLabels[0]}
-                      </Text>
-                    </Tab>
-                    <Tab _selected={{ border: 'solid 2.5px #000057', borderRadius: '10px' }} padding="20px" mr="50px">
-                      <Text m="auto" textStyle="h5" casing="uppercase" fontWeight="600">
-                        {tabLabels[1]}
-                      </Text>
-                    </Tab>
+                    {tabs.map((tab, index) => (
+                      <Tab
+                        _selected={{ border: 'solid 2.5px #000057', borderRadius: '10px' }}
+                        key={index}
+                        padding="20px"
+                        mr="50px"
+                      >
+                        <Text m="auto" textStyle="h5" casing="uppercase" fontWeight="600">
+                          {tab.label}
+                        </Text>
+                      </Tab>
+                    ))}
                   </TabList>
                 </Tabs>
               </Box>
