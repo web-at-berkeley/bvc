@@ -11,7 +11,7 @@ export * from './ContactForm';
 export * from './ServiceCard';
 export * from './Collage';
 export * from './CommunityCard';
-export * from './MyCarosel';
 export * from './BlueBanner';
 export * from './PartnerBanner';
 export * from './SquareCompany';
+export * from './Timeline';

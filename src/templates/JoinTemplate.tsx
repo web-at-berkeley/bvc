@@ -1,13 +1,35 @@
-import { Box, Button, HStack, Link, Stack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import FadeIn from 'react-fade-in';
-import { Header, HeaderProps, PageWrapper, MyCarosel } from '../components';
+import { Box, Button, Link, Image, Stack, Text, VStack } from '@chakra-ui/react';
+import { Header, HeaderProps, PageWrapper, Timeline, TimelineProps } from '../components';
+import { Carousel } from 'react-bootstrap';
+
+type Link = { text: string; url: string };
+
 export type JoinTemplateProps = {
   navLinks: HeaderProps;
-  events: string[];
-  events2: string[];
+  title: string;
+  preDeadline: TimelineProps;
+  postDeadline: TimelineProps;
+  subtitle: string;
+  links: Link[];
+  applyText: string;
+  appLink: Link;
+  imageHeader: string;
+  images: any[];
 };
-export const JoinTemplate = ({ navLinks, events, events2 }: JoinTemplateProps) => {
+export const JoinTemplate = ({
+  navLinks,
+  title,
+  preDeadline,
+  postDeadline,
+  subtitle,
+  links,
+  applyText,
+  appLink,
+  imageHeader,
+  images,
+}: JoinTemplateProps) => {
   return (
     <PageWrapper>
       <FadeIn transitionDuration={750} delay={200}>
@@ -29,75 +51,46 @@ export const JoinTemplate = ({ navLinks, events, events2 }: JoinTemplateProps) =
               color="white"
               casing="uppercase"
             >
-              Recruitment
+              {title}
             </Text>
-            <HStack gap="30px">
-              <Box backgroundColor="white" w="5px" h="430px"></Box>
-              <VStack align="start" spacing="40px">
-                {events.map((event, idx) => (
-                  <Text fontWeight="600" casing="uppercase" textStyle="h5" color="white" key={idx}>
-                    {event}
-                  </Text>
-                ))}
-              </VStack>
-            </HStack>
+            <Timeline events={preDeadline.events} />
             <Text textStyle="h4" color="white" casing="uppercase" position="relative" left="10px" m="30px 0">
               Application Deadline
             </Text>
-            <HStack gap="30px">
-              <Box backgroundColor="white" w="5px" h="150px"></Box>
-              <VStack align="start" spacing="40px">
-                {events2.map((event, idx) => (
-                  <Text fontWeight="600" casing="uppercase" textStyle="h5" color="white" key={idx}>
-                    {event}
-                  </Text>
-                ))}
-              </VStack>
-            </HStack>
-            {/* <Text textStyle="h4" color="white" casing="uppercase" position="relative" left="10px">
-              Onboarding
-            </Text>
-            <HStack gap="30px">
-              <Box backgroundColor="white" w="5px" h="150px"></Box>
-              <VStack align="start" spacing="30px"></VStack>
-            </HStack> */}
+            <Timeline events={postDeadline.events} />
           </VStack>
+
           <VStack w={['100%', '100%', '100%', '50%']} textAlign="center" p="100px 0">
             <Text textStyle="h4" m="0 75px">
-              Have Questions? Check out our join our recruiment interest form or schedule a coffee chat. We look forward
-              to meeting you!
+              {subtitle}
             </Text>
             <Stack direction={{ base: 'column', md: 'column', lg: 'column', xl: 'row' }} padding="20px" spacing="60px">
-              <Link
-                isExternal={true}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSc_TnFU4M5yx2PKgPKbLIgDgCzn3fNXCMlW3qbw0VZWxD3VBg/viewform?usp=sf_link"
-              >
-                <Button>SIGN UP FOR COFFEE CHATS</Button>
-              </Link>
-              <Link
-                isExternal={true}
-                href="https://docs.google.com/forms/d/e/1FAIpQLScEXz2ANJlPW8gmpiDuIpe8cHdESiQvtJzsz0JdSSYVF-vclA/viewform?usp=sf_link"
-              >
-                <Button casing="uppercase">RECRUITMENT INTEREST FORM</Button>
-              </Link>
+              {links.map((link, idx) => (
+                <Link isExternal={true} href={link.url} key={idx}>
+                  <Button>{link.text}</Button>
+                </Link>
+              ))}
             </Stack>
             <Box h="200px"></Box>
-            <Text textStyle="h3" color="black" casing="uppercase" fontWeight="700" padding="20px">
-              Ready to Apply?
+            <Text textStyle="h3" color="blue" casing="uppercase" fontWeight="700" padding="20px">
+              {applyText}
             </Text>
-            <Link
-              isExternal={true}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdP32zR3geBl7feZZ0XhIEhs9b68awbeQAho-XprcoSqlhv0A/viewform?usp=sf_link"
-            >
-              <Button casing="uppercase">FALL 2022 APPLICATION</Button>
+            <Link isExternal={true} href={appLink.url}>
+              <Button>{appLink.text}</Button>
             </Link>
           </VStack>
         </Stack>
         <Box p="50px 0px" backgroundColor="lightGray" textAlign="center">
           <Text mb="30px" textStyle="h3" fontSize="45px" fontWeight="700" casing="uppercase">
-            Our Club Moments
+            {imageHeader}
           </Text>
-          <MyCarosel />
+          <Carousel style={{ padding: '10px' }} variant="dark" indicators={false}>
+            {images.map((image, idx) => (
+              <Carousel.Item key={idx}>
+                <Image margin="auto" src={image} />
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </Box>
       </FadeIn>
     </PageWrapper>
