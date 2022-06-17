@@ -25,14 +25,13 @@ export const TeamTemplate = ({ title, people, navLinks, footerLinks }: TeamTempl
             marginTop="70px"
             marginLeft={['200px', '200px', '200px', '0px']}
           >
-            {/* <Text casing="uppercase" textStyle="h1" w="100%" pt="70px" pb="37px"> */}
             {title}
           </Text>
           <Wrap marginBottom="70px" direction="row" w="100%" justify="space-around" spacing="70px">
-            {people?.map(({ photo, title, name, to }, i) =>
+            {people?.map((person, i) =>
               i < 6 ? (
                 <WrapItem key={i}>
-                  <TeamCard photo={photo} title={title} name={name} to={to} />
+                  <TeamCard {...person} />
                 </WrapItem>
               ) : (
                 <></>
@@ -40,10 +39,10 @@ export const TeamTemplate = ({ title, people, navLinks, footerLinks }: TeamTempl
             )}
           </Wrap>
           <Wrap paddingTop="70px" direction="row" w="100%" justify="center" spacing="200px">
-            {people?.map(({ photo, title, name, to }, i) =>
+            {people?.map((person, i) =>
               i >= 6 ? (
                 <WrapItem key={i}>
-                  <TeamCard photo={photo} title={title} name={name} to={to} />
+                  <TeamCard {...person} />
                 </WrapItem>
               ) : (
                 <></>
