@@ -11,15 +11,6 @@ import icon1 from '../assets/images/icon1.png';
 import icon2 from '../assets/images/ICON2.png';
 import icon3 from '../assets/images/icon3.png';
 import heroImg from '../assets/images/hero.png';
-import mastercard from '../assets/logos/mastercard.png';
-import citi from '../assets/logos/citi.png';
-import intuit from '../assets/logos/Intuit.png';
-import square from '../assets/logos/square.png';
-import deutche from '../assets/logos/deutche.png';
-import salesforce from '../assets/logos/salesforce.png';
-import amazon from '../assets/logos/amazon.png';
-import jpmorgan from '../assets/logos/jpmorgan.png';
-import ey from '../assets/logos/ey.png';
 
 // These are used across all pages as well as storybook
 export const HOME_NAV = {
@@ -55,8 +46,35 @@ export const content: HomeTemplateProps = {
       needs when exploring the Bay Area's VC landscape.
     </p>
   ),
-  partnerImage: courtyard,
-  partnerText: 'we are partnered with Courtyard ventures, A Haas MBA student-run fund.',
+  numbers: [
+    { title: '$1.6M', caption: <p>Fund Size</p> },
+    {
+      title: '20',
+      caption: (
+        <p>
+          Active Mentors
+          <br />
+          &amp; Speakers
+        </p>
+      ),
+    },
+    { title: '35', caption: <p>Active Members</p> },
+    {
+      title: '40',
+      caption: (
+        <p>
+          Partnered
+          <br />
+          Organizations
+        </p>
+      ),
+    },
+  ],
+  partner: {
+    image: courtyard,
+    message: 'we are partnered with Courtyard ventures, A Haas MBA student-run fund.',
+    link: 'https://www.courtyard.vc',
+  },
   section2Title: 'Our Pillars',
   section2Body: (
     <p>
@@ -101,7 +119,6 @@ export const content: HomeTemplateProps = {
   ],
   section3Title: 'Members Recieve Offers From',
   section3Image: all_logos,
-  logos: [square, citi, salesforce, deutche, mastercard, amazon, jpmorgan, intuit, ey],
   footerLinks: HOME_FOOTER,
 };
 

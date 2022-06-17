@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
 import React from 'react';
-import { VStack, Text, Box, Image, Button, Stack, Center, Link as ChakraLink } from '@chakra-ui/react';
-import {
-  Header,
-  Footer,
-  IconCard,
-  HeaderProps,
-  PageWrapper,
-  Billboard,
-  IconCardProps,
-  FooterProps,
-} from '../components';
+import { VStack, Text, Box, Image, Button, Stack, Flex, Center, Link as ChakraLink } from '@chakra-ui/react';
+import { Header, Footer, IconCard, HeaderProps, PageWrapper, IconCardProps, FooterProps } from '../components';
 import { Link } from 'gatsby';
 import FadeIn from 'react-fade-in';
+
+type Partner = {
+  image: any;
+  message: string;
+  link: string;
+};
+
+type BillboardNumber = { title: string; caption: React.ReactNode };
+
 export type HomeTemplateProps = {
   navLinks: HeaderProps;
   title: string;
@@ -21,8 +21,8 @@ export type HomeTemplateProps = {
   subtitle: string;
   section1Title: string;
   section1Body: React.ReactNode;
-  partnerImage: any;
-  partnerText: string;
+  numbers: BillboardNumber[];
+  partner: Partner;
   section2Title: string;
   section2Body: React.ReactNode;
   section2Cards: IconCardProps[];
@@ -39,8 +39,8 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
   subtitle,
   section1Title,
   section1Body,
-  partnerImage,
-  partnerText,
+  numbers,
+  partner,
   section2Title,
   section2Body,
   section2Cards,
@@ -93,7 +93,20 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
             </Text>
           </VStack>
 
-          <Billboard />
+          <Box width="100%" align="center" padding="60px 100px" backgroundColor="rgb(250, 223, 148)">
+            <Flex justify="space-around" wrap="wrap">
+              {numbers.map((number, idx) => (
+                <Box key={idx}>
+                  <Text textStyle="h2" casing="uppercase">
+                    {number.title}
+                  </Text>
+                  <Text textStyle="h4" fontSize="21px" color="#636363" fontWeight="700">
+                    {number.caption}
+                  </Text>
+                </Box>
+              ))}
+            </Flex>
+          </Box>
           <Stack
             width="80%"
             align={['center', 'center', 'center', 'start']}
@@ -102,7 +115,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           >
             <Image
               shadow="3px 3px 5px 3px #00000033"
-              src={partnerImage}
+              src={partner.image}
               width="250px"
               mr={[0, 0, '0px', '100px']}
               mb="30px"
@@ -114,13 +127,13 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
                 fontSize="40px"
                 casing="uppercase"
               >
-                {partnerText}
+                {partner.message}
               </Text>
               <ChakraLink
                 style={{ textDecoration: 'none' }}
                 isExternal
                 alignSelf={['center', 'center', 'center', 'start']}
-                href="https://www.courtyard.vc"
+                href={partner.link}
                 rel="noreferrer"
               >
                 <Button>DETAILS</Button>
