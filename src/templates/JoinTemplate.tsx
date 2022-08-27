@@ -1,11 +1,11 @@
 import React from 'react';
 import FadeIn from 'react-fade-in';
+
 import { Box, Button, Link, Image, Stack, Text, VStack } from '@chakra-ui/react';
-import { Header, HeaderProps, PageWrapper, Timeline, TimelineProps } from '../components';
+import { Header, HeaderProps, PageWrapper, Timeline, TimelineProps, Footer, FooterProps } from '../components';
 import { Carousel } from 'react-bootstrap';
 
 type Link = { text: string; url: string };
-
 export type JoinTemplateProps = {
   navLinks: HeaderProps;
   title: string;
@@ -17,6 +17,7 @@ export type JoinTemplateProps = {
   appLink: Link;
   imageHeader: string;
   images: any[];
+  footerLinks: FooterProps;
 };
 export const JoinTemplate = ({
   navLinks,
@@ -29,6 +30,7 @@ export const JoinTemplate = ({
   appLink,
   imageHeader,
   images,
+  footerLinks,
 }: JoinTemplateProps) => {
   return (
     <PageWrapper>
@@ -93,6 +95,7 @@ export const JoinTemplate = ({
           </Carousel>
         </Box>
       </FadeIn>
+      <Footer {...footerLinks} />
     </PageWrapper>
   );
 };

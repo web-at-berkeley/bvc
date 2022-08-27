@@ -57,7 +57,7 @@ export const ContactTemplate = ({ title, tabs, navLinks, footerLinks }: ContactT
                 </Tabs>
               </Box>
               <Box>
-                <ContactForm />
+                <ContactForm label={tabIndex} />
               </Box>
             </VStack>
           </Stack>

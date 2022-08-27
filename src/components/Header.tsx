@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => {
                     </Link>
                   </Nav.Link>
                 ) : (
-                  <Container style={{ margin: 'auto 5px', position: 'relative', top: '5px' }} key={i}>
+                  <Container style={{ margin: 'auto 5px', position: 'relative', top: '8px' }} key={i}>
                     <Nav.Link href={linkText} key={i}>
                       <Link style={{ textDecoration: 'none' }} to={linkTarget} key={i}>
                         <Text color="#FFFFFF" textStyle="bodyLarge">

@@ -70,7 +70,7 @@ const theme = extendTheme({
     Input: {
       baseStyle: {
         field: {
-          borderColor: 'primary.accent2',
+          // borderColor: 'primary.accent2',
           _hover: {
             borderColor: 'primary.foreground',
           },
@@ -82,12 +82,6 @@ const theme = extendTheme({
             w: '370px',
             h: '55px',
             borderColor: 'blue',
-          },
-        },
-        lg: {
-          field: {
-            w: '783px',
-            h: '55px',
           },
         },
       },

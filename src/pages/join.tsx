@@ -3,7 +3,7 @@ import theme from '../theme';
 import Fonts from '../fonts';
 import { ChakraProvider } from '@chakra-ui/react';
 import { JoinTemplate, JoinTemplateProps } from '../templates';
-import { HOME_NAV } from './index';
+import { HOME_NAV, HOME_FOOTER } from './index';
 import carosel0 from '../assets/carosel/carosel0.png';
 import carosel1 from '../assets/carosel/carosel1.png';
 import carosel2 from '../assets/carosel/carosel2.png';
@@ -44,6 +44,7 @@ const JoinPage = () => {
     },
     imageHeader: 'Our Club Moments',
     images: [carosel0, carosel1, carosel2, carosel3, carosel4],
+    footerLinks: HOME_FOOTER,
   };
   return (
     <React.StrictMode>
