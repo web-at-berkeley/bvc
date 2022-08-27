@@ -1,4 +1,4 @@
-import { Stack, Image, Text, VStack, Button } from '@chakra-ui/react';
+import { Stack, Image, Text, VStack, Button, Link } from '@chakra-ui/react';
 import React from 'react';
 
 export type PartnerBannerProps = {
@@ -6,8 +6,9 @@ export type PartnerBannerProps = {
   bottomTitle: string;
   bottomText: string;
   buttonText: string;
+  link: string;
 };
-export const PartnerBanner = ({ bottomPic, bottomTitle, bottomText, buttonText }: PartnerBannerProps) => {
+export const PartnerBanner = ({ bottomPic, bottomTitle, bottomText, buttonText, link }: PartnerBannerProps) => {
   return (
     <Stack
       direction={['column', 'column', 'column', 'row']}
@@ -26,9 +27,11 @@ export const PartnerBanner = ({ bottomPic, bottomTitle, bottomText, buttonText }
         <Text mb="50px" textStyle="h5">
           {bottomText}
         </Text>
-        <Button padding="0 30px" position="relative" left={['25%', '25%', '25%', '70%']}>
-          {buttonText}
-        </Button>
+        <Link isExternal={true} href={link}>
+          <Button padding="0 30px" position="relative" left={['25%', '25%', '25%', '70%']}>
+            {buttonText}
+          </Button>
+        </Link>
       </VStack>
     </Stack>
   );

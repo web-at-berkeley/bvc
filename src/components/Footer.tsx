@@ -1,21 +1,21 @@
 import React from 'react';
 import { FiFacebook, FiInstagram, FiLinkedin, FiMail } from 'react-icons/fi';
-
 import { Flex, Link, HStack, Text, Image } from '@chakra-ui/react';
 import badge from '../assets/images/badge.png';
-
-export type FooterProps = {
-  facebook: string;
-  instagram: string;
-  linkedin: string;
-  email: string;
-};
 
 const iconProps = {
   style: {
     color: 'white',
   },
   size: '25px',
+  _hover: { transform: 'scale(1.1)' },
+};
+
+export type FooterProps = {
+  facebook: string;
+  instagram: string;
+  linkedin: string;
+  email: string;
 };
 
 export const Footer = ({ facebook, instagram, linkedin, email }: FooterProps) => {

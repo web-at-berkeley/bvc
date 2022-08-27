@@ -18,9 +18,9 @@ export const CommunityTemplate = ({
   highlightTitle,
   navLinks,
   section1Body,
-  footerLinks,
   logos,
   people,
+  footerLinks,
 }: CommunityTemplateProps) => {
   return (
     <PageWrapper>

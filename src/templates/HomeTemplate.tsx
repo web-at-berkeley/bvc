@@ -28,7 +28,6 @@ export type HomeTemplateProps = {
   section2Cards: IconCardProps[];
   section3Title: string;
   section3Image: any;
-  logos: any[];
   footerLinks: FooterProps;
 };
 
@@ -174,7 +173,6 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
           </Text>
           <Image width={['100%', '100%', '100%', '70%']} src={section3Image} m="0" />
         </VStack>
-
         <Footer {...footerLinks} />
       </FadeIn>
     </PageWrapper>

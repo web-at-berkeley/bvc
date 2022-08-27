@@ -28,7 +28,6 @@ const ContactPage = () => {
     tab1Date: '',
     tab1Body:
       'Our annual showpiece event, the Berkeley Venture Capital Demo Day features 11 analysts and their sourced startups alongside vertical analysis. Our fellows present their investment theses, alongside the four mentors. Our past events have included an audience of 20+ VCs alongside professors and students from Harvard, Stanford and New York University.',
-
     footerLinks: HOME_FOOTER,
     quadImages: [quad1, quad2, quad3, quad4],
     quadTitles: ['Sourcing', 'Due Diligence', 'Valuation', 'Portfolio Consulting'],

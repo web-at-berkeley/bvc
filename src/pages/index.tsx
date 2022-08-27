@@ -26,10 +26,10 @@ export const HOME_NAV = {
 
 // These are used across all pages as well as storybook
 export const HOME_FOOTER = {
-  facebook: 'https://www.facebook.com/',
-  instagram: 'https://www.instagram.com/',
-  linkedin: 'https://www.linkedin.com/',
-  email: 'email@example.com',
+  facebook: 'https://www.facebook.com/ucberkeleyventurecapital/',
+  instagram: 'https://www.instagram.com/berkeley.venture.capital/',
+  linkedin: 'https://www.linkedin.com/company/berkeley-venture-capital/',
+  email: 'mailto:info@berkeleyvc.org',
 };
 
 export const content: HomeTemplateProps = {

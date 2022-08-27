@@ -87,7 +87,7 @@ export const content = {
       name: 'Ariana Desiree Thacker, Mentor',
       link: 'linkedin.com/in/arianadthacker',
       cardContent:
-        'Thacker is the founding general partner of Conscience VC, a pre-seed fund investing in companies operating at the intersection of science and consumer, with a background in Chemical Engineering from UCLA',
+        'Thacker is the founding general partner of Conscience VC, a pre-seed fund investing in companies operating at the intersection of science and consumer, with a background in Chemical Engineering from UCLA.',
     },
     {
       face: bhat,

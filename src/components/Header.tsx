@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ pages }: HeaderProps) => {
           </Text>
         </Link>
       </Box>
-      <Box width={['0', '0', '0px', '800px']}></Box>
+      <Box width={['0', '0', '0px', '100%']}></Box>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">

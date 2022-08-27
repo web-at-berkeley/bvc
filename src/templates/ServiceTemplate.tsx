@@ -68,7 +68,7 @@ export const ServiceTemplate = ({
             {section1Body}
           </Text>
 
-          <Tabs index={tabIndex} w="100%" onChange={(index) => setTabIndex(index)}>
+          <Tabs index={tabIndex} w="100%" onChange={(index: number) => setTabIndex(index)}>
             <TabList m="80px 0px">
               <Stack spacing="50px" direction={['column', 'column', 'row']}>
                 <Tab _selected={{ border: 'solid 2.5px #000057', borderRadius: '10px' }}>
@@ -103,6 +103,7 @@ export const ServiceTemplate = ({
               bottomTitle={bottomTitle}
               bottomText={bottomText}
               buttonText={'MORE INFO'}
+              link={'https://www.courtyard.vc/'}
             />
             <PartnerBanner
               bottomPic={collegeVentures}
@@ -111,6 +112,7 @@ export const ServiceTemplate = ({
                 'Berkeley Venture Capital is a proud member of College Ventures Network, a group of 40+ VC funds and organizations across the U.S. where we help coordinate resource sharing, deal flow and events'
               }
               buttonText={'WEBSITE'}
+              link={'https://www.collegeventuresnetwork.com'}
             />
             <Flex margin="50px" wrap="wrap" justify={['center', 'center', 'space-between', 'space-between']}>
               {squareCompanies.map((item, idx) => (
@@ -120,7 +122,7 @@ export const ServiceTemplate = ({
           </Box>
         ) : (
           <Box>
-            <BlueBanner title={tab1Title} body={tab1Body} />
+            <BlueBanner title={tab1Title} body={tab1Body} link={'https://forms.gle/znfAarZaJZkmxyaP8'} />
 
             <Stack mt="50px" direction={{ base: 'column', xl: 'row' }} justify="space-around">
               <VStack>
@@ -138,6 +140,7 @@ export const ServiceTemplate = ({
               body={
                 'Join us for monthly networking dinners in Fall 2022. Our events include startup founders, VCs and people involved in the Bay Area startup ecosystem. For more information, including the dinner schedule, please click the RSVP button below, and send us a message.'
               }
+              link={'https://forms.gle/znfAarZaJZkmxyaP8'}
             />
             <VStack mb="100px">
               <Image src={pizza} mb="20px" />
