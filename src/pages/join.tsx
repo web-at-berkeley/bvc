@@ -16,25 +16,35 @@ const JoinPage = () => {
     title: 'RECRUITMENT',
     preDeadline: {
       events: [
-        'coffee chats start',
-        'infosession 1',
-        'calpalooza day 1',
-        'calpalooza day 2',
-        'infosession 2',
-        'coffee chats end',
+        'coffee chats start - 08/29 ',
+        'infosession 1   (virtual) - 08/30 6-7pm PDT',
+        'tabling start date - 08/29',
+        'tabling end date - 09/02',
+        'infosession 2   (in-person)  - 09/02',
+        'coffee chats end - 09/04',
       ],
     },
-    postDeadline: { events: ['First round interviews', 'second round interviews'] },
-    subtitle:
-      'Have Questions? Check out our recruiment interest form or schedule a coffee chat. We look forward to meeting you!',
+    postDeadline: {
+      events: [
+        'First round interviews - 09/07',
+        'second round interviews',
+        'second round interviews - 09/08',
+        'acceptance offers - 09/10',
+      ],
+    },
+    subtitle: 'Have Questions? Email us or schedule a coffee chat. We look forward to meeting you!',
     links: [
       {
         text: 'SIGN UP FOR COFFEE CHATS',
-        url: 'https://docs.google.com/forms/d/e/1FAIpQLSc_TnFU4M5yx2PKgPKbLIgDgCzn3fNXCMlW3qbw0VZWxD3VBg/viewform?usp=sf_link',
+        url: 'https://airtable.com/shrn1Wy3BcJg2ympS',
       },
       {
-        text: 'RECRUITMENT INTEREST FORM',
-        url: 'https://docs.google.com/forms/d/e/1FAIpQLScEXz2ANJlPW8gmpiDuIpe8cHdESiQvtJzsz0JdSSYVF-vclA/viewform?usp=sf_link',
+        text: 'EMAIL US',
+        url: 'mailto:info@berkeleyvc.org?subject=[EXTERNAL] Question(s) about BVC',
+      },
+      {
+        text: 'INFOSESSION 1 ZOOM LINK',
+        url: 'https://berkeley.zoom.us/j/97762943290',
       },
     ],
     applyText: 'Ready to Apply?',

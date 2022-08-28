@@ -36,7 +36,9 @@ export const JoinTemplate = ({
     <PageWrapper>
       <FadeIn transitionDuration={750} delay={200}>
         <Header {...navLinks} />
+        {/* Begin two columns */}
         <Stack direction={['column', 'column', 'column', 'row']}>
+          {/* Left column*/}
           <VStack
             w={['100%', '100%', '100%', '50%']}
             backgroundColor="blue"
@@ -57,22 +59,30 @@ export const JoinTemplate = ({
             </Text>
             <Timeline events={preDeadline.events} />
             <Text textStyle="h4" color="white" casing="uppercase" position="relative" left="10px" m="30px 0">
-              Application Deadline
+              Application Deadline- 09/05 11:59 PM PDT
             </Text>
             <Timeline events={postDeadline.events} />
           </VStack>
 
+          {/* Right column */}
           <VStack w={['100%', '100%', '100%', '50%']} textAlign="center" p="100px 0">
             <Text textStyle="h4" m="0 75px">
               {subtitle}
             </Text>
-            <Stack direction={{ base: 'column', md: 'column', lg: 'column', xl: 'row' }} padding="20px" spacing="60px">
+            <Stack
+              direction={{ base: 'column', md: 'column', lg: 'column', xl: 'row' }}
+              padding={{ base: '30px', md: '30px', lg: '30px', xl: '60px' }}
+              wrap="wrap"
+              justify="space-around"
+              align="center"
+            >
               {links.map((link, idx) => (
-                <Link isExternal={true} href={link.url} key={idx}>
+                <Link isExternal={true} href={link.url} key={idx} p="60px">
                   <Button>{link.text}</Button>
                 </Link>
               ))}
             </Stack>
+
             <Box h="200px"></Box>
             <Text textStyle="h3" color="blue" casing="uppercase" fontWeight="700" padding="20px">
               {applyText}
@@ -82,6 +92,8 @@ export const JoinTemplate = ({
             </Link>
           </VStack>
         </Stack>
+        {/* End two columns */}
+
         <Box p="50px 0px" backgroundColor="lightGray" textAlign="center">
           <Text mb="30px" textStyle="h3" fontSize="45px" fontWeight="700" casing="uppercase">
             {imageHeader}

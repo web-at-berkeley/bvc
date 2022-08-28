@@ -11,6 +11,7 @@ import icon1 from '../assets/images/icon1.png';
 import icon2 from '../assets/images/ICON2.png';
 import icon3 from '../assets/images/icon3.png';
 import heroImg from '../assets/images/hero.png';
+import Favicon from 'react-favicon';
 
 // These are used across all pages as well as storybook
 export const HOME_NAV = {
@@ -127,6 +128,7 @@ const IndexPage = () => {
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         <Fonts />
+        <Favicon url="https://www.vectorstock.com/royalty-free-vector/letter-b-logo-flat-icon-style-vector-4679185" />
         <HomeTemplate {...content} />
       </ChakraProvider>
     </React.StrictMode>

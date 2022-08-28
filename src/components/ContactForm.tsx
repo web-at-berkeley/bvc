@@ -2,7 +2,7 @@ import { Button, Input, Textarea, VStack, Stack } from '@chakra-ui/react';
 import React from 'react';
 
 export type ContactFormProps = {
-  label: string;
+  label: number;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -11,8 +11,8 @@ export const ContactForm = ({ label }: ContactFormProps) => {
     <form
       className="gform"
       method="POST"
-      data-email="ishanthewizard@gmail.com"
-      action="https://script.google.com/macros/s/AKfycbyAPi_eb4spI3CL1dIY1T2tpoYbIbPqYx2nZYwviSgQJ73db88q8owZU1zBDy3xjzZ7FQ/exec"
+      data-email="berkeleyventurecap@gmail.com"
+      action="https://script.google.com/macros/s/AKfycbznMYm5W_MWzw2kAEpZ8iOeXoE3hfHDsq0T7DmbNWN5U-M_wE2_Mmqwip8Iqflwn-Yk/exec"
     >
       <VStack spacing="28px">
         <Stack direction={['column', 'column', 'column', 'column', 'row']} spacing="43px">
@@ -60,6 +60,8 @@ export const ContactForm = ({ label }: ContactFormProps) => {
             name="message"
             isRequired
           />
+          <Input for="honeypot" id="honeypot" type="text" name="honeypot" value="" hidden />
+          <Input for="type" id="type" type="type" name="type" value={label == 0 ? 'Student' : 'Client'} hidden />
         </Stack>
         <Button type="submit" className="button-success pure-button button-xlarge" size="lg">
           SEND MESSAGE&nbsp;
