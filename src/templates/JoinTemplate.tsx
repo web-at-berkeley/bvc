@@ -74,18 +74,18 @@ export const JoinTemplate = ({
             </Text>
             <Stack
               direction={{ base: 'column', md: 'column', lg: 'column', xl: 'row' }}
-              padding={{ base: '30px', md: '30px', lg: '30px', xl: '60px' }}
+              padding={{ base: '30px', md: '30px', lg: '30px', xl: '70px' }}
               wrap="wrap"
               justify="space-around"
               align="center"
             >
               {links.map((link, idx) => (
-                <Link isExternal={true} href={link.url} key={idx} p="60px">
+                <Link isExternal={true} href={link.url} key={idx} p="30px">
                   <Button>{link.text}</Button>
                 </Link>
               ))}
             </Stack>
-            <VStack position="relative" top="80px" padding="20px" spacing="60px">
+            <VStack position="relative" padding="20px" spacing="60px">
               <Text textStyle="h5" fontWeight="700">
                 INFOSESSION 2 LOCATION: Health Tech Co lab (Blum Hall 180)
               </Text>
