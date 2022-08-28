@@ -15,22 +15,20 @@ const JoinPage = () => {
     navLinks: HOME_NAV,
     title: 'RECRUITMENT',
     preDeadline: {
+      dates: ['08/29', '08/29', '08/30', '09/02', '09/02', '09/04'],
       events: [
-        'coffee chats start - 08/29 ',
-        'infosession 1   (virtual) - 08/30 6-7pm PDT',
-        'tabling start date - 08/29',
-        'tabling end date - 09/02',
-        'infosession 2   (in-person)  - 09/02',
-        'coffee chats end - 09/04',
+        'coffee chats start',
+        'tabling start date',
+        'infosession 1 (virtual) 6-7pm PDT',
+        'tabling end date',
+        'infosession 2 (in-person)',
+        'coffee chats end',
       ],
     },
+    deadline: 'APPLICATION DEADLINE- 09/05 11:59 PM PDT',
     postDeadline: {
-      events: [
-        'First round interviews - 09/07',
-        'second round interviews',
-        'second round interviews - 09/08',
-        'acceptance offers - 09/10',
-      ],
+      dates: ['09/07', '09/08', '09/10'],
+      events: ['First round interviews - 09/07', 'second round interviews - 09/08', 'acceptance offers - 09/10'],
     },
     subtitle: 'Have Questions? Email us or schedule a coffee chat. We look forward to meeting you!',
     links: [

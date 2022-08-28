@@ -1,19 +1,36 @@
+import { Box, HStack, VStack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { Box, HStack, Text, VStack } from '@chakra-ui/react';
 
-export type TimelineProps = { events: string[] };
+export type TimelineProps = {
+  dates: string[];
+  events: string[];
+};
+export const Timeline = ({ dates, events }: TimelineProps) => {
+  const lister = (lst: string[]) => {
+    return lst.map((event, idx) => {
+      return (
+        <Text
+          fontWeight="600"
+          color={lst[0] !== dates[0] ? 'white' : 'orange'}
+          casing="uppercase"
+          textStyle="h5"
+          key={idx}
+        >
+          {event}
+        </Text>
+      );
+    });
+  };
+  const h = dates.length * 70 + 10;
 
-export const Timeline: React.FC<TimelineProps> = ({ events }: TimelineProps) => {
-  const HEIGHT_PER_EVENT = 72;
   return (
     <HStack gap="30px">
-      <Box backgroundColor="white" w="5px" h={`${events.length * HEIGHT_PER_EVENT}px`}></Box>
+      <VStack align="start" spacing={['90px', '90px', '40px', '80px', '40px']}>
+        {lister(dates)}
+      </VStack>
+      <Box backgroundColor="white" w="5px" h={String(h) + 'px'}></Box>
       <VStack align="start" spacing="40px">
-        {events.map((event, idx) => (
-          <Text fontWeight="600" casing="uppercase" textStyle="h5" color="white" key={idx}>
-            {event}
-          </Text>
-        ))}
+        {lister(events)}
       </VStack>
     </HStack>
   );

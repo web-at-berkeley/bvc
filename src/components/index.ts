@@ -9,7 +9,6 @@ export * from './WideCard';
 export * from './ServiceForm';
 export * from './ContactForm';
 export * from './ServiceCard';
-export * from './Collage';
 export * from './CommunityCard';
 export * from './BlueBanner';
 export * from './PartnerBanner';

@@ -6,10 +6,12 @@ import { Header, HeaderProps, PageWrapper, Timeline, TimelineProps, Footer, Foot
 import { Carousel } from 'react-bootstrap';
 
 type Link = { text: string; url: string };
+
 export type JoinTemplateProps = {
   navLinks: HeaderProps;
   title: string;
   preDeadline: TimelineProps;
+  deadline: string;
   postDeadline: TimelineProps;
   subtitle: string;
   links: Link[];
@@ -23,6 +25,7 @@ export const JoinTemplate = ({
   navLinks,
   title,
   preDeadline,
+  deadline,
   postDeadline,
   subtitle,
   links,
@@ -57,11 +60,11 @@ export const JoinTemplate = ({
             >
               {title}
             </Text>
-            <Timeline events={preDeadline.events} />
+            <Timeline dates={preDeadline.dates} events={preDeadline.events} />
             <Text textStyle="h4" color="white" casing="uppercase" position="relative" left="10px" m="30px 0">
-              Application Deadline- 09/05 11:59 PM PDT
+              {deadline}
             </Text>
-            <Timeline events={postDeadline.events} />
+            <Timeline dates={postDeadline.dates} events={postDeadline.events} />
           </VStack>
 
           {/* Right column */}
