@@ -5,7 +5,7 @@ import { Footer, FooterProps, Header, HeaderProps, PageWrapper, TeamCard } from 
 import FadeIn from 'react-fade-in';
 
 export type PersonProps = {
-  photo: any;
+  photo: File;
   title: string;
   name: string;
   link: string;

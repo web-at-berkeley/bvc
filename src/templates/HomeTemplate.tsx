@@ -16,7 +16,7 @@ type BillboardNumber = { title: string; caption: React.ReactNode };
 
 export type HomeTemplateProps = {
   navLinks: HeaderProps;
-  title: string;
+  mainTitle: string;
   heroImg: any;
   subtitle: string;
   section1Title: string;
@@ -33,7 +33,7 @@ export type HomeTemplateProps = {
 
 export const HomeTemplate: React.FC<HomeTemplateProps> = ({
   navLinks,
-  title,
+  mainTitle,
   heroImg,
   subtitle,
   section1Title,
@@ -72,7 +72,7 @@ export const HomeTemplate: React.FC<HomeTemplateProps> = ({
             casing="uppercase"
             fontSize={['50px', '76px', '76px']}
           >
-            {title}
+            {mainTitle}
           </Text>
           <Text as="i" color="#FFFFFF" textStyle="h4" m="auto" textAlign="center">
             {subtitle}

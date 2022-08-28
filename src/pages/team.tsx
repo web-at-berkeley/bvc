@@ -15,7 +15,7 @@ import tung from '../assets/teamphotos/tung.png';
 
 const TeamPage = () => {
   const content = {
-    title: 'Our Team',
+    mainTitle: 'Our Team',
     people: [
       {
         photo: dua,

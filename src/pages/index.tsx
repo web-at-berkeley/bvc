@@ -35,7 +35,7 @@ export const HOME_FOOTER = {
 
 export const content: HomeTemplateProps = {
   navLinks: HOME_NAV,
-  title: 'Berkeley Venture Capital',
+  mainTitle: 'Berkeley Venture Capital',
   heroImg: heroImg,
   subtitle: "Cal's Only Undergraduate VC Organization",
   section1Title: 'Who are we?',

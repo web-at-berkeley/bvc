@@ -4,13 +4,13 @@ import { Footer, Header, HeaderProps, TeamCard, TeamCardProps, PageWrapper, Foot
 import FadeIn from 'react-fade-in';
 
 interface TeamTemplateProps {
-  title: string;
+  mainTitle: string;
   people: TeamCardProps[];
   navLinks: HeaderProps;
   footerLinks: FooterProps;
 }
 
-export const TeamTemplate = ({ title, people, navLinks, footerLinks }: TeamTemplateProps) => {
+export const TeamTemplate = ({ mainTitle, people, navLinks, footerLinks }: TeamTemplateProps) => {
   return (
     <PageWrapper>
       <FadeIn transitionDuration={750} delay={200}>
@@ -25,7 +25,7 @@ export const TeamTemplate = ({ title, people, navLinks, footerLinks }: TeamTempl
             marginTop="70px"
             marginLeft={['200px', '200px', '200px', '0px']}
           >
-            {title}
+            {mainTitle}
           </Text>
           <Wrap marginBottom="70px" direction="row" w="100%" justify="space-around" spacing="70px">
             {people?.map((person, i) =>
