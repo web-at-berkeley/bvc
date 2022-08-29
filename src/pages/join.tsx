@@ -38,7 +38,7 @@ const JoinPage = () => {
       },
       {
         text: 'EMAIL US',
-        url: 'mailto:info@berkeleyvc.org?subject=[EXTERNAL] Question(s) about BVC',
+        url: 'mailto:info@berkeleyvc.org?subject=Recruitment',
       },
       {
         text: 'INFOSESSION 1 ZOOM LINK',
