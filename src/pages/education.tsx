@@ -33,7 +33,7 @@ const EducationPage = () => {
       ),
       buttonText: 'APPLY',
       buttonLink:
-        'https://docs.google.com/forms/d/e/1FAIpQLScJmROqUQwqs9bYhNdhKAm3_713EnYPU643NYdoNHA-udEjTg/viewform?usp=sf_link',
+        'https://docs.google.com/forms/d/e/1FAIpQLSeCEI458jMu9kPewibZdExgMdJXqbb3nWZod1mexXlEPfYQZA/viewform?pli=1',
       people: [
         { photo: leal, title: 'Director of Cirriculum', name: 'Nathan Leal', link: 'linkedin.com/in/nathan-leal' },
         { photo: sobkin, title: 'Venture Analyst', name: 'Danielle Sobkin', link: 'linkedin.com/in/dsobkin' },

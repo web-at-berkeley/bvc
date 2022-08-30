@@ -56,7 +56,7 @@ const TeamPage = () => {
       {
         photo: garg,
         title: 'Co-Director of Finance',
-        name: 'Vega Garg',
+        name: 'Veda Garg',
         link: 'linkedin.com/in/veda-garg',
       },
       {
