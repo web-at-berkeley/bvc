@@ -101,9 +101,7 @@ export const ServiceTemplate = ({
             <PartnerBanner
               bottomPic={collegeVentures}
               bottomTitle={'Sequoia Capital'}
-              bottomText={
-                ''
-              }
+              bottomText={''}
               buttonText={'WEBSITE'}
               link={'https://www.sequoiacap.com'}
             />
