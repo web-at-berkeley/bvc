@@ -99,12 +99,23 @@ export const ServiceTemplate = ({
               Our Partners
             </Text>
             <PartnerBanner
+              bottomPic={collegeVentures}
+              bottomTitle={'Sequoia Capital'}
+              bottomText={
+                'Berkeley Venture Capital is a proud member of College Ventures Network, a group of 40+ VC funds and organizations across the U.S. where we help coordinate resource sharing, deal flow and events'
+              }
+              buttonText={'WEBSITE'}
+              link={'https://www.collegeventuresnetwork.com'}
+            />
+
+            <PartnerBanner
               bottomPic={bottomPic}
               bottomTitle={bottomTitle}
               bottomText={bottomText}
               buttonText={'MORE INFO'}
               link={'https://www.courtyard.vc/'}
             />
+
             <PartnerBanner
               bottomPic={collegeVentures}
               bottomTitle={'College Ventures Network '}
