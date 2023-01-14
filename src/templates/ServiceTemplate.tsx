@@ -97,7 +97,7 @@ export const ServiceTemplate = ({
               </Flex>
             </Box>
             <Text m="65px" textStyle="h3" casing="uppercase">
-              Our Partners
+              Cooperating With
             </Text>
             <PartnerBanner
               bottomPic={sequoia}
