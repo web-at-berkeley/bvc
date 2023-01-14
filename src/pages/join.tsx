@@ -25,7 +25,7 @@ const JoinPage = () => {
         'coffee chats end',
       ],
     },
-    deadline: 'APPLICATION DEADLINE- 01/28 11:59 PM PDT',
+    deadline: 'APPLICATION DEADLINE- 01/28 11:59 PM PST',
     postDeadline: {
       dates: ['01/31', '02/02', '02/03-06'],
       events: ['First round interviews', 'second round interviews', 'acceptance offers'],

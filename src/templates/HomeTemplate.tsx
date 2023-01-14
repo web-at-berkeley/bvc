@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
+
 import React from 'react';
 import { VStack, Text, Box, Image, Button, Stack, Flex, Center, Link as ChakraLink } from '@chakra-ui/react';
 import { Header, Footer, IconCard, HeaderProps, PageWrapper, IconCardProps, FooterProps } from '../components';
