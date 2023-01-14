@@ -15,20 +15,20 @@ const JoinPage = () => {
     navLinks: HOME_NAV,
     title: 'RECRUITMENT',
     preDeadline: {
-      dates: ['08/29', '08/29', '08/30', '09/02', '09/02', '09/04'],
+      dates: ['01/18', '01/23', '01/26', '01/27', '01/28', '01/28'],
       events: [
         'coffee chats start',
         'tabling start date',
-        'infosession 1 (virtual) 6-7pm PDT',
+        'infosession 1 (time & location TBD)',
         'tabling end date',
-        'infosession 2 (in-person)',
+        'infosession 2 (time & location TBD)',
         'coffee chats end',
       ],
     },
-    deadline: 'APPLICATION DEADLINE- 09/05 11:59 PM PDT',
+    deadline: 'APPLICATION DEADLINE- 01/28 11:59 PM PDT',
     postDeadline: {
-      dates: ['09/07', '09/08', '09/10'],
-      events: ['First round interviews - 09/07', 'second round interviews - 09/08', 'acceptance offers - 09/10'],
+      dates: ['01/31', '02/02', '02/03-06'],
+      events: ['First round interviews', 'second round interviews', 'acceptance offers'],
     },
     subtitle: 'Have Questions? Email us or schedule a coffee chat. We look forward to meeting you!',
     links: [
@@ -40,15 +40,15 @@ const JoinPage = () => {
         text: 'EMAIL US',
         url: 'mailto:info@berkeleyvc.org?subject=Recruitment',
       },
-      {
-        text: 'INFOSESSION 1 ZOOM LINK',
-        url: 'https://berkeley.zoom.us/j/97762943290',
-      },
+      // {
+      //   text: 'INFOSESSION 1 ZOOM LINK',
+      //   url: 'https://berkeley.zoom.us/j/97762943290',
+      // },
     ],
     applyText: 'Ready to Apply?',
     appLink: {
-      text: 'FALL 2022 APPLICATION',
-      url: 'https://docs.google.com/forms/d/e/1FAIpQLSdP32zR3geBl7feZZ0XhIEhs9b68awbeQAho-XprcoSqlhv0A/viewform?usp=sf_link',
+      text: 'Spring 2023 APPLICATION',
+      url: 'https://airtable.com/shrTlRFwEyhL7fmKu',
     },
     imageHeader: 'Our Club Moments',
     images: [carosel0, carosel1, carosel2, carosel3, carosel4],

@@ -16,6 +16,7 @@ import serviceImg2 from '../assets/images/serviceImg2.png';
 import pizza from '../assets/carosel/carosel1.png';
 import collegeVentures from '../assets/images/collegeVentures.png';
 import FadeIn from 'react-fade-in';
+import sequoia from '../assets/images/sequoia.png';
 interface ServiceTemplateProps {
   title: string;
   section1Body: string;
@@ -99,7 +100,7 @@ export const ServiceTemplate = ({
               Our Partners
             </Text>
             <PartnerBanner
-              bottomPic={collegeVentures}
+              bottomPic={sequoia}
               bottomTitle={'Sequoia Capital'}
               bottomText={''}
               buttonText={'WEBSITE'}
