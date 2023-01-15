@@ -48,7 +48,7 @@ export const content: HomeTemplateProps = {
     </p>
   ),
   numbers: [
-    { title: '$1.6M', caption: <p>Fund Size</p> },
+    // { title: '$1.6M', caption: <p>Fund Size</p> },
     {
       title: '20',
       caption: (
