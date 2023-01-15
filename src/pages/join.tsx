@@ -15,7 +15,7 @@ const JoinPage = () => {
     navLinks: HOME_NAV,
     title: 'RECRUITMENT',
     preDeadline: {
-      dates: ['01/18', '01/23', '01/26', '01/27', '01/28', '01/28'],
+      dates: ['01/18', '01/19', '01/26', '01/27', '01/28', '01/28'],
       events: [
         'coffee chats start',
         'tabling start date',
