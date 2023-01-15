@@ -20,9 +20,6 @@ const ContactPage = () => {
             <br />
             <br />
             <b>For recruitment and curricular inquiries, please select "Student."</b>
-            <br />
-            <br />
-            <b>You can also directly email us at info@berkeleyvc.org</b>
           </p>
         ),
       },
@@ -35,14 +32,10 @@ const ContactPage = () => {
             <br />
             <br />
             <b>For organization/corporate partnership inquiries, please select "Client."</b>
-            <br />
-            <br />
-            <b>You can also directly email us at info@berkeleyvc.org</b>
           </p>
         ),
       },
     ],
-
     footerLinks: HOME_FOOTER,
   };
 
