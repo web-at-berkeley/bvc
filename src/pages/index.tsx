@@ -118,7 +118,7 @@ export const content: HomeTemplateProps = {
       ),
     },
   ],
-  section3Title: 'Members Recieve Offers From',
+  section3Title: 'Members Receive Offers From',
   section3Image: all_logos,
   footerLinks: HOME_FOOTER,
 };
