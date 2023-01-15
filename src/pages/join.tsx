@@ -34,7 +34,7 @@ const JoinPage = () => {
     links: [
       {
         text: 'SIGN UP FOR COFFEE CHATS',
-        url: 'https://airtable.com/shrn1Wy3BcJg2ympS',
+        url: 'https://airtable.com/shrVDGLMpAxVC4jt6',
       },
       {
         text: 'EMAIL US',
