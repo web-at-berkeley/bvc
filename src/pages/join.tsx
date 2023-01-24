@@ -19,9 +19,9 @@ const JoinPage = () => {
       events: [
         'coffee chats start',
         'tabling start date',
-        'infosession 1 (time & location TBD)',
+        'infosession 1 (6 - 7:30 PM)',
         'tabling end date',
-        'infosession 2 (time & location TBD)',
+        'infosession 2 (2 - 3:30 PM)',
         'coffee chats end',
       ],
     },
@@ -40,10 +40,10 @@ const JoinPage = () => {
         text: 'EMAIL US',
         url: 'mailto:info@berkeleyvc.org?subject=[EXTERNAL] Question(s) about BVC',
       },
-      // {
-      //   text: 'INFOSESSION 1 ZOOM LINK',
-      //   url: 'https://berkeley.zoom.us/j/97762943290',
-      // },
+      {
+        text: 'INFOSESSION 1 ZOOM LINK',
+        url: 'https://berkeley.zoom.us/j/91628198349',
+      },
     ],
     applyText: 'Ready to Apply?',
     appLink: {
