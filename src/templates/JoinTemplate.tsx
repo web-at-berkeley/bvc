@@ -86,7 +86,7 @@ export const JoinTemplate = ({
               ))}
             </Stack>
             <VStack position="relative" padding="20px" spacing="60px">
-              {/* <Text textStyle="h5" fontWeight="700">
+              <Text textStyle="h5" fontWeight="700">
                 INFOSESSION 2 LOCATION: Health Tech Co lab (Blum Hall 180)
               </Text>
               <iframe
@@ -96,7 +96,7 @@ export const JoinTemplate = ({
                 style={{ border: 0 }}
                 allowFullScreen={false}
                 loading="lazy"
-              ></iframe> */}
+              ></iframe>
             </VStack>
             <Box h="200px"></Box>
             <Text textStyle="h3" color="blue" casing="uppercase" fontWeight="700" padding="20px">
