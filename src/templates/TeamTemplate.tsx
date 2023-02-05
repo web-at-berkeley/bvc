@@ -27,6 +27,12 @@ export const TeamTemplate = ({ mainTitle, people, navLinks, footerLinks }: TeamT
           >
             {mainTitle}
           </Text>
+          <iframe
+            className="airtable-embed"
+            src="https://airtable.com/embed/shrr5WkHZOF6m4u6A?backgroundColor=blue&viewControls=on"
+            width="75%"
+            height="700"
+          ></iframe>
           <Wrap marginBottom="70px" direction="row" w="100%" justify="space-around" spacing="70px">
             {people?.map((person, i) =>
               i < 6 ? (
