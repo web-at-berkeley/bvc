@@ -1,6 +1,6 @@
 import React from 'react';
-import { VStack, Wrap, WrapItem, Text } from '@chakra-ui/react';
-import { Footer, Header, HeaderProps, TeamCard, TeamCardProps, PageWrapper, FooterProps } from '../components';
+import { VStack, Wrap, Text } from '@chakra-ui/react';
+import { Footer, Header, HeaderProps, TeamCardProps, PageWrapper, FooterProps } from '../components';
 import FadeIn from 'react-fade-in';
 
 interface TeamTemplateProps {
@@ -10,7 +10,7 @@ interface TeamTemplateProps {
   footerLinks: FooterProps;
 }
 
-export const TeamTemplate = ({ mainTitle, people, navLinks, footerLinks }: TeamTemplateProps) => {
+export const TeamTemplate = ({ mainTitle, navLinks, footerLinks }: TeamTemplateProps) => {
   return (
     <PageWrapper>
       <FadeIn transitionDuration={750} delay={200}>
@@ -33,7 +33,7 @@ export const TeamTemplate = ({ mainTitle, people, navLinks, footerLinks }: TeamT
             width="75%"
             height="700"
           ></iframe>
-          <Wrap marginBottom="70px" direction="row" w="100%" justify="space-around" spacing="70px">
+          {/* <Wrap marginBottom="70px" direction="row" w="100%" justify="space-around" spacing="70px">
             {people?.map((person, i) =>
               i < 6 ? (
                 <WrapItem key={i}>
@@ -43,9 +43,9 @@ export const TeamTemplate = ({ mainTitle, people, navLinks, footerLinks }: TeamT
                 <></>
               ),
             )}
-          </Wrap>
+          </Wrap> */}
           <Wrap paddingTop="70px" direction="row" w="100%" justify="center" spacing="200px">
-            {people?.map((person, i) =>
+            {/* {people?.map((person, i) =>
               i >= 6 ? (
                 <WrapItem key={i}>
                   <TeamCard {...person} />
@@ -53,7 +53,7 @@ export const TeamTemplate = ({ mainTitle, people, navLinks, footerLinks }: TeamT
               ) : (
                 <></>
               ),
-            )}
+            )} */}
           </Wrap>
         </VStack>
         <Footer {...footerLinks} />
