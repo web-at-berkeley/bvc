@@ -87,7 +87,7 @@ export const JoinTemplate = ({
             </Stack>
             <VStack position="relative" padding="20px" spacing="60px">
               <Text textStyle="h5" fontWeight="700">
-                INFOSESSION 1 LOCATION: Health Tech Co lab (Blum Hall 120)
+                INFOSESSION 2 LOCATION: Health Tech Co lab (Blum Hall 120)
               </Text>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.3699688050233!2d-122.26099944839473!3d37.875029714057376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857c23c2608865%3A0x505b508468966255!2sBlum%20Hall%2C%20Berkeley%2C%20CA%2094709!5e0!3m2!1sen!2sus!4v1661642316268!5m2!1sen!2sus"
