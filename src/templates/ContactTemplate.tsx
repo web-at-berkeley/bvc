@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text, VStack, Spacer, Tabs, TabList, Tab, Stack } from '@chakra-ui/react';
-import {Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
+import { Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
 import FadeIn from 'react-fade-in';
 
 export type ContactTabProps = {
