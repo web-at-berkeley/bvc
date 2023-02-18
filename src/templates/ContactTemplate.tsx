@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Text, VStack, Spacer, Tabs, TabList, Tab, Stack } from '@chakra-ui/react';
-import { ContactForm, Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
+import {Footer, FooterProps, Header, HeaderProps, PageWrapper } from '../components';
 import FadeIn from 'react-fade-in';
 
 export type ContactTabProps = {
@@ -31,13 +31,7 @@ export const ContactTemplate = ({ title, tabs, navLinks, footerLinks }: ContactT
             justifyContent="space-between"
             spacing="7%"
           >
-            <VStack minWidth="50%">
-              <Text w="100%" textStyle="bodyLarge">
-                {tabs[tabIndex].leftText}
-              </Text>
-            </VStack>
-
-            <VStack w="100%" align="start" spacing="77px">
+            <VStack w="100%" align="start" spacing="350px">
               <Box>
                 <Tabs index={tabIndex} w="100%" onChange={(index: number) => setTabIndex(index)}>
                   <TabList>
@@ -57,8 +51,16 @@ export const ContactTemplate = ({ title, tabs, navLinks, footerLinks }: ContactT
                 </Tabs>
               </Box>
               <Box>
-                <ContactForm label={tabIndex} />
+                {
+                  // <ContactForm label={tabIndex} />
+                }
               </Box>
+            </VStack>
+
+            <VStack>
+              <Text w="100%" textStyle="bodyLarge">
+                {tabs[tabIndex].leftText}
+              </Text>
             </VStack>
           </Stack>
         </VStack>

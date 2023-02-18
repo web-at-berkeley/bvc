@@ -16,10 +16,9 @@ const ContactPage = () => {
         leftText: (
           <p>
             Interested in learning more about us and potentially partnering with BVC? We welcome all professional
-            partnerships! Fill out the form on the right, and we will reach out to you within 1-3 business days.
+            partnerships! Please contact us through email: info@berkeleyvc.org
             <br />
-            <br />
-            <b>For recruitment and curricular inquiries, please select "Student."</b>
+            {/* <b>For recruitment and curricular inquiries, please select "Student."</b> */}
           </p>
         ),
       },
@@ -27,11 +26,11 @@ const ContactPage = () => {
         label: 'Client',
         leftText: (
           <p>
-            Questions about recruitment, DeCal, fellowship curriculum, etc.? Fill out the form on the right, and we will
-            reach out to you!
+            Questions about recruitment, DeCal, fellowship curriculum, etc.? Please contact us through email:
+            info@berkeleyvc.org.
             <br />
             <br />
-            <b>For organization/corporate partnership inquiries, please select "Client."</b>
+            {/* <b>For organization/corporate partnership inquiries, please select "Client."</b> */}
           </p>
         ),
       },
